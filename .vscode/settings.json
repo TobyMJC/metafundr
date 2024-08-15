@@ -1,3 +1,6 @@
 {
-    "python.analysis.extraPaths": ["./metafundr/server/Lib/site-packages"]
+    "python.analysis.extraPaths": [
+        "./metafundr/server/Lib/site-packages"
+    ],
+    "python.pythonPath": "server\\Scripts\\python.exe"
 }
