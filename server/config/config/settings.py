@@ -82,6 +82,11 @@ DATABASES = {
     }
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8000"
+]
+
+CSRF_COOKIE_SECURE = False 
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

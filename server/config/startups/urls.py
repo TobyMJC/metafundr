@@ -8,5 +8,6 @@ router = routers.DefaultRouter()
 router.register(r'posts', PostViewSet)
 
 urlpatterns = [
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)), 
+    path('login/', views.login)
 ]
