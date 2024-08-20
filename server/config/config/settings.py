@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'startups'
+    'startups',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -50,6 +52,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MEDIA_URL = '/images/'
+MEDIA_ROOT = BASE_DIR / 'images'
 
 ROOT_URLCONF = 'config.urls'
 
@@ -81,6 +86,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173"
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8000"
