@@ -1,0 +1,34 @@
+*{
+	margin:5px;
+	padding: 5px;
+}
+.UserMail{
+	
+	background-color: red;
+	width: 194px;
+	/*Cambiar el width por autoajustable centrado */
+}
+.DateBirth{
+	background-color: red;
+	width: 194px;
+	
+	/*Cambiar el width por autoajustable centrado */
+}
+
+.Password{
+
+	
+	background-color: red;
+	width: 194px;
+/*Cambiar el width por autoajustable centrado */
+}
+.SubmitS{
+       margin-left:75px;
+}
+.SignIn {
+	background-color:#019;
+	width: 214px;
+	margin-top: 150px;
+	margin-left: 550px;
+	/*Cambiar el width y el margin por autoajustable entre ciertos rangos y centrado */
+}

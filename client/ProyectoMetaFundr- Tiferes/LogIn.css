@@ -1,0 +1,36 @@
+*{
+	margin:5px;
+	padding: 5px;
+}
+
+.Mail{
+	
+	background-color: red;
+	width: 194px;
+	/*Cambiar el width por autoajustable centrado */
+}
+
+
+.Password{
+
+	
+	background-color: red;
+	width: 194px;
+/*Cambiar el width por autoajustable centrado */
+}
+.Submitl{
+       margin-left:75px;
+}
+.Register {
+	margin-left: 60px;
+    color: #3498db; /* Cambia este valor por el color que prefieras */
+    text-decoration: none; /* Opcional: Elimina el subrayado del enlace */
+    color: #2980b9; /* Cambia este valor por el color al pasar el mouse */
+}
+.LogIn {
+	background-color:#019;
+	width: 214px;
+	margin-top: 150px;
+	margin-left: 550px;
+	/*Cambiar el width y el margin por autoajustable entre ciertos rangos y centrado */
+}
