@@ -1,0 +1,124 @@
+body {
+    background-color: #4c382e;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.search-bar {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto 20px;
+}
+
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+}
+
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #777;
+    font-size: 18px;
+}
+
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+
+.tab {
+    padding: 10px;
+    border-bottom: 2px solid #333;
+    font-weight: bold;
+   
+}
+
+
+.active {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.column {
+    width: 48%;
+}
+
+
+.card {
+    background-color: #fffdd0; /* Color de fondo de las tarjetas */
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+
+.card img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+.card-info {
+    flex-grow: 1;
+}
+
+
+.card-info p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.card-info span {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.info-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #333;
+}
+
+
+
