@@ -5,7 +5,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.SearchI{
+    background-color: grey;
+}
 
 .container {
     max-width: 1200px;
@@ -19,6 +21,8 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    
+    
 }
 
 
@@ -78,10 +82,12 @@ h2 {
 
 .Glass{
     position: relative;
-    left: -33px;
+    left: -44px;
+    font-size: 150%;
 }
 .SearchI{
     background-color: #fffdd0;
+    
 }
 
 
@@ -113,6 +119,3 @@ p {
     font-size: 25px;
 }
 
-.header {
-  
-}
