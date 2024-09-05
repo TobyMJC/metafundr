@@ -1,93 +1,112 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #D1A776;
-    margin: 0;
-    padding: 0;
+    background-color: #F4E1BC;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.container {
-    background-color: #FAE8C8;
-    width: 400px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.back-button, .profile-icon {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-h1 {
-    font-size: 20px;
-    font-weight: bold;
     margin: 0;
 }
 
-.profile-section, .personal-info, .buttons {
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #56493C;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #FFFFFF;
-    color: #56493C;
-    font-weight: bold;
-}
-
-.change-password, .view-startups, .switch-company {
-    background-color: #D1A776;
-    border: none;
-    padding: 10px;
-    margin-bottom: 10px;
+.container {
+    background-color: #F7E6BE;
+    border: 2px solid #A07855;
     border-radius: 10px;
+    padding: 20px;
+    width: 600px; /* Aumentar ancho para nueva columna */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.container button, .container input {
+    background-color: #A07855;
+    border: solid black 1px;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
     cursor: pointer;
-    font-weight: bold;
-    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.container button:hover, .container input:hover {
+    background-color: #8B6145;
+}
+
+.container input[type="text"], .container input[type="button"] {
+    width: calc(100% - 22px);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.LABEL{
+    font-size: 12px;
+}
+
+.h4{
+    
+}
+.user-button {
+    background-color: #DAA06D;
+    float: left;
+    margin-right:-40px ;
+    font-size: 16px;
+   width: 190px;
+   height: 35px;
+   
+   
+}
+
+.user-button:hover {
+    background-color: #C78C5B;
+}
+
+.button-right {
+    float: right;
+    width: 190px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.container .center-button {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
     width: 100%;
+    background-color: #DAA06D;
+    margin-top: 23px;
 }
 
-.change-password:hover, .view-startups:hover, .switch-company:hover {
-    background-color: #BA8746;
+.container .center-button:hover {
+    background-color: #C78C5B;
 }
 
-.info-row {
+.container .info-group {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-label {
-    font-weight: bold;
-    color: #56493C;
+.info-group div {
+    width: 32%; /* Ajustar ancho para tres columnas */
 }
 
-span {
-    background-color: #D1A776;
-    color: #FFFFFF;
-    padding: 8px;
-    border-radius: 5px;
+.info-group input {
+    width: 100%;
+    background-color: #E2C7A7;
+    text-align: center;
 }

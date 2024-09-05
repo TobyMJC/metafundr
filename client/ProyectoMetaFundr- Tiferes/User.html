@@ -3,59 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
+    <title>Perfil de Usuario</title>
     <link rel="stylesheet" href="User.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <button class="back-button">←</button>
-            <h1>Perfil</h1>
-            <button class="profile-icon">👤</button>
+        <div class="input-group">
+            <h4>Nombre de usuario:</h4>
+            <button class="user-button">User1</button>
+            <button class="button-right">Cambiar Contraseña</button>
         </div>
-
-        <div class="profile-section">
-            <h2>Nombre de usuario:</h2>
-            <input type="text" value="User1" readonly>
-            <button class="change-password">Cambiar Contraseña</button>
-        </div>
-
-        <div class="personal-info">
-            <h2>Información Personal</h2>
-            <div class="info-row">
-                <label>Primer registro</label>
-                <span>08/05/24</span>
+        <h2>Información Personal</h2>
+        <div class="info-group">
+            <div>
+                <label class="LABEL"   for="registro">Primer registro</label>
+                <input type="text" id="registro" value="08/05/24" readonly>
             </div>
-            <div class="info-row">
-                <label>Nombre/s</label>
-                <input type="text" value="Juan Fernando" readonly>
+            <div>
+                <label class="LABEL"   for="nombre">Nombre/s</label>
+                <input type="text" id="nombre" value="Juan Fernando" readonly>
             </div>
-            <div class="info-row">
-                <label>DNI</label>
-                <span>20.345.213</span>
-            </div>
-            <div class="info-row">
-                <label>Fecha de Nacimiento</label>
-                <span>18/01/93</span>
-            </div>
-            <div class="info-row">
-                <label>Apellido/s</label>
-                <input type="text" value="Quintero" readonly>
-            </div>
-            <div class="info-row">
-                <label>País de nacimiento</label>
-                <span>Colombia</span>
-            </div>
-            <div class="info-row">
-                <label>País de residencia</label>
-                <span>Argentina</span>
+            <div>
+                <label class="LABEL" for="email">Correo Electrónico</label>
+                <input type="text" id="email" value="juan@example.com" readonly>
             </div>
         </div>
 
-        <div class="buttons">
-            <button class="view-startups">Ver tus Start Ups</button>
-            <button class="switch-company">Cambiar a Empresa</button>
+        <div class="info-group">
+            <div>
+                <label class="LABEL" for="dni">DNI</label>
+                <input type="text" id="dni" value="20.345.213" readonly>
+            </div>
+            <div>
+                <label class="LABEL" for="apellido">Apellido/s</label>
+                <input type="text" id="apellido" value="Quintero" readonly>
+            </div>
+            <div>
+                <label class="LABEL" for="telefono">Teléfono</label>
+                <input type="text" id="telefono" value="+54 9 11 2345 6789" readonly>
+            </div>
         </div>
+
+        <div class="info-group">
+            <div>
+              
+                <button class="center-button">Ver tus Start Ups</button>
+            </div>
+            <div>
+                <label class="LABEL" for="pais-nacimiento">País de nacimiento</label>
+                <input type="text" id="pais-nacimiento" value="Colombia" readonly>
+            </div>
+            <div>
+               
+                <button class="center-button">Cambiar a Empresa</button>
+            </div>
+        </div>
+
+
+
+      
+       
     </div>
 </body>
 </html>
