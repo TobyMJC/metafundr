@@ -12,7 +12,10 @@ body {
     background-color: #F7E6BE;
     border: 2px solid #A07855;
     border-radius: 10px;
-    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top:25px;
+    padding-bottom:25px ;
     width: 600px; /* Aumentar ancho para nueva columna */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -21,12 +24,27 @@ body {
     text-align: left;
     font-size: 18px;
     margin-bottom: 10px;
+ 
 }
 
+h4{
+    position: relative;
+    top: -4px;
+}
+
+#registro,#dni, #Mail {
+background-color: white !important;
+
+}
+.user-input {
+    background-color: white !important;
+    text-align: center;
+    margin-left: 44px;
+}
 .container button, .container input {
     background-color: #A07855;
     border: solid black 1px;
-    color: white;
+    
     border-radius: 15px;
     padding: 10px;
     cursor: pointer;
@@ -49,11 +67,9 @@ body {
     font-size: 12px;
 }
 
-.h4{
-    
-}
+
 .user-button {
-    background-color: #DAA06D;
+    background-color: white;
     float: left;
     margin-right:-40px ;
     font-size: 16px;
@@ -64,7 +80,7 @@ body {
 }
 
 .user-button:hover {
-    background-color: #C78C5B;
+    background-color: white;
 }
 
 .button-right {
@@ -110,6 +126,14 @@ body {
 
 .info-group input {
     width: 100%;
-    background-color: #E2C7A7;
+    
     text-align: center;
+}
+#apellido,#nombre,#pais-residencia {
+ background-color: #C0A17A;
+ font-weight: bold;
+}
+
+#boton-usuario{
+    background-color: white;
 }
