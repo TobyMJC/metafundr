@@ -22,7 +22,7 @@
             <div class="circle"  id="redirect-icon" >
                 <i class="fas fa-plus plus"   ></i>
             </div>
-            <div class="circle">
+            <div class="circle"  id="redirect-user">
                 <i class="fas fa-user"></i>
             </div>  
             
@@ -95,6 +95,9 @@
             // Manejador de eventos para redirigir al hacer clic en el icono Glass
             document.getElementById('search-button').addEventListener('click', function() {
             window.location.href = 'MainBusqueda.html';
+        });
+        document.getElementById('redirect-user').addEventListener('click', function() {
+            window.location.href = 'User.html';
         });
     </script>
 </body>

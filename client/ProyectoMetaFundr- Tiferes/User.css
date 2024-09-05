@@ -36,7 +36,10 @@ body {
 .container button:hover, .container input:hover {
     background-color: #8B6145;
 }
-
+.raya{
+    width: 200px;
+    height: 4px;
+}
 .container input[type="text"], .container input[type="button"] {
     width: calc(100% - 22px);
     margin-top: 5px;

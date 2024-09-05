@@ -35,6 +35,10 @@ body {
     height: 40%;
     margin-top: 6px;
 }
+#redirect-user{
+    cursor: pointer;
+
+}
 .nav{
     display: flex;
 }
