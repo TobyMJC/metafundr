@@ -5,19 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil y Personalizar</title>
     <link rel="stylesheet" href="headerUser.css">
+    <script src="https://kit.fontawesome.com/fac6908e9f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- Header de la primera pantalla -->
     <div class="header">
         <div class="header-left">
-            <div class="icon-button">
-                <img src="https://cdn-icons-png.flaticon.com/512/2223/2223615.png" alt="Back Icon">
+            <div class="circle" id="redirect-icon">
+                <i class="fas fa-plus plus"></i>
             </div>
-            <div class="icon-button">
-                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User Icon">
+            <div class="circle" id="redirect-user">
+                <i class="fas fa-user"></i>
+            </div>  
+        </div>
+        <div class="texts">
+            <div class="title underline">Perfil</div>
+            <div class="customize">Personalizar</div>
+        </div>
+    </div>
+
+    <!-- Contenido principal de la segunda pantalla -->
+    <div class="container">
+        <div class="input-group">
+            <h4>Nombre de usuario:</h4>
+            <input class="user-input" placeholder="User1"></input>
+            <button class="button-right">Cambiar Contraseña</button>
+        </div>
+        <img src="raya.png" alt="" class="raya">
+        <h2>Información Personal</h2>
+        <div class="info-group">
+            <div>
+                <label class="LABEL" for="Nombre">Nombre/s</label>
+                <input type="text" id="Nombre" value="Juan Fernando" readonly>
+            </div>
+            <div>
+                <label class="LABEL" for="dni">DNI</label>
+                <input type="text" id="dni" value="30.123.089" readonly>
+            </div>
+            <div>
+                <label class="LABEL" for="pais-residencia">País de residencia</label>
+                <input type="text" id="pais-residencia" value="Argentina" readonly>
             </div>
         </div>
-        <div class="title underline">Perfil</div>
-        <div class="customize">Personalizar</div>
+
+        <div class="info-group">
+            <div>
+                <label class="LABEL" for="apellido">Apellido/s</label>
+                <input type="text" id="apellido" value="Quintero" readonly>
+            </div>
+            <div>
+                <label class="LABEL" for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input type="text" id="fecha-nacimiento" value="18/01/93" readonly>
+            </div>
+            <div>
+                <label class="LABEL" for="Mail">Gmail</label>
+                <input type="text" id="Mail" value="abc123@gmail.com" readonly>
+            </div>
+        </div>
+
+        <div class="info-group">
+            <div>
+                <button class="center-button">Ver tus Start Ups</button>
+            </div>
+            <div>
+                <label class="LABEL" for="primer-registro">Primer registro</label>
+                <input type="text" id="primer-registro" value="08/05/24" readonly>
+            </div>
+            <div>
+                <button class="center-button">Cambiar a Empresa</button>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>
