@@ -39,10 +39,12 @@ body {
 .header .title {
     font-size: 16px;
     text-align: center;
+    
 }
 
 .header .title.underline {
     border-bottom: 2px solid #000;
+    width: 160px;
 }
 
 .header .customize {
@@ -51,19 +53,21 @@ body {
 
 .texts {
     display: flex;
-    margin-left: 13%;
+    margin-left: -30%;
     padding: 20px;
     width: 100%;
+    justify-content: space-evenly;
 }
 
 .container {
     background-color: #FFFFE0;
     border: 2px solid #A07855;
-    border-radius: 10px;
-    padding: 20px 60px;
-    margin: 20px auto;
+    border-radius: 20px;
+    padding: 20px 40px;
+    margin: 50px auto;
     max-width: 900px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.25)
 }
 
 .container h2 {
