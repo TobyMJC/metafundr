@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="SignUp.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-box">
+            <button  onclick="location.href='LogIn.html'"   class="back-button">&#x2190;</button>
+            <div class="logo"> <img class="LogoN" src="LogoN.png" alt="Logo"></div>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="E-Mail" required>
+                <label class="DB">Date of Birth</label>
+                <div class="dob">
+                    
+                    <input type="text" placeholder="DD" maxlength="2" required>
+                    <input type="text" placeholder="MM" maxlength="2" required>
+                    <input type="text" placeholder="YYYY" maxlength="4" required>
+                </div>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit"  onclick="location.href='Main.html'"  >Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

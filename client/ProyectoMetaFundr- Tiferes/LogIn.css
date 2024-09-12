@@ -1,36 +1,86 @@
-*{
-	margin:5px;
-	padding: 5px;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #ebad67 ,#633b0e); /* Fondo degradado del body */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.Mail{
-	
-	background-color: red;
-	width: 194px;
-	/*Cambiar el width por autoajustable centrado */
+.container {
+    background: transparent; /* Fondo degradado del container */
+    padding: 40px;
+    border-radius: 10px; /* El borde sigue redondeado */
+    text-align: center;
+    position: relative;
 }
 
+.logo img {
+    width: 100px;
+    margin-bottom: 20px;
+}
 
-.Password{
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #000; /* Borde negro de 2px */
+    border-radius: 10px; /* Menos redondeado */
+    font-size: 16px;
+    text-align: center; /* Centra el placeholder */
+}
 
-	
-	background-color: red;
-	width: 194px;
-/*Cambiar el width por autoajustable centrado */
+.login-form input::placeholder {
+    text-align: center; /* Centra el texto del placeholder */
 }
-.Submitl{
-       margin-left:75px;
+
+.login-form .forgot-password {
+    display: block;
+    margin: 10px 0;
+    font-size: 12px;
+    color: #000;
+    text-decoration: none;
 }
-.Register {
-	margin-left: 60px;
-    color: #3498db; /* Cambia este valor por el color que prefieras */
-    text-decoration: none; /* Opcional: Elimina el subrayado del enlace */
-    color: #2980b9; /* Cambia este valor por el color al pasar el mouse */
+
+.login-form .login-btn,
+.login-form .register-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000; /* Borde negro de 1px más pequeño */
+    border-radius: 10px; /* Menos redondeado */
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #d18e4a;
+    color: #fff;
 }
-.LogIn {
-	background-color:#019;
-	width: 214px;
-	margin-top: 150px;
-	margin-left: 550px;
-	/*Cambiar el width y el margin por autoajustable entre ciertos rangos y centrado */
+
+.login-form .login-btn {
+    font-size: 18px; /* Aumenta un poco el tamaño de la fuente */
+    border: 0,5px solid #000;    
+    background-color: #f7b069;  
+    width: 80%;
+    color: #000;
+}
+
+.login-form .register-btn {
+    background-color: #f7b069;
+    width: 40%; /* Hace el botón "Register" más pequeño */
+    font-size: 14px; /* Disminuye el tamaño de la fuente */
+    margin: 0 auto; /* Centra el botón */
+    border: 0,5px solid #000;    
+    color: #000;
+
+}
+
+.flag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.flag img {
+    width: 30px;
 }
