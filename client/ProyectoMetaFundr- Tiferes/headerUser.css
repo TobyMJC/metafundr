@@ -3,15 +3,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #d39b6c; /* Color similar al fondo de la primera imagen */
+    background: linear-gradient(180deg, #ebad67 ,#633b0e);
+    height: 100vh;/* Color similar al fondo de la primera imagen */
     font-weight: bold;
+
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d39b6c;
+   
     padding: 10px 20px;
 }
 
