@@ -31,9 +31,10 @@ body {
     border: none;
     font-size: 24px;
     position: absolute;
-    top: 10px;
+    top: 25px;
     left: 10px;
     cursor: pointer;
+
 }
 
 .logo {
@@ -45,8 +46,8 @@ body {
 form input {
     width: 100%;
     padding: 10px;
-    
-    margin-bottom: 10px;
+    height: 37px;
+    margin-bottom: 25px;
     border: none;
     border-radius: 5px;
     background-color: #ffed9f;
@@ -88,8 +89,13 @@ form button:hover {
 .DB {
    display: flex;
    margin-bottom:5px ;
+   color: #666;
+   
 }
 
+input::placeholder {
+    text-align: center; /* Centra el texto del placeholder */
+}
 .LogoN {
     width: 20px;
 }
