@@ -5,75 +5,115 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5dc;
+    font-family: Arial, sans-serif;
+    background-color: #f6f1e3;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.card {
-    background-color: #f9e5c3;
-    width: 350px;
-    border-radius: 10px;
+.profile-card {
+    background-color: #faf3d9;
+    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+    width: 90%;
+    height: 85%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 30px;
+    
+    height: 90px;
 }
 
+
 .profile-pic {
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
-    border: 2px solid #000;
+    width: 65px;
+    height: 65px;
+    margin-left: 15px;
 }
 
 h1 {
-    font-size: 1.2rem;
+    font-size: 18px;
+    color: #333;
     margin-left: 10px;
+    flex-grow: 1;
+    margin-left: 6%;
 }
 
 .follow-btn {
-    background-color: #d9a274;
-    color: #fff;
+    background-color: #e0caa9;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.details {
+.tab-menu {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
-.left, .right {
-    display: flex;
-    flex-direction: column;
+.tab-menu span {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 20px;
 }
+
+.tab-menu .active {
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+
+.info-grid {
+    margin-bottom: 20px;
+    width: fit-content;
+    height: fit-content;
+  margin-left: 25%;
+    background-color: red;
+    width: 60%;
+}
+.ALine,.BLine{
+display: flex;
+}
+
+
+
 
 .info-item {
-    margin-bottom: 10px;
-    background-color: #e3c299;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
+    background-color: #e0caa9;
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 10px;
+
 }
 
+
+
 .contact-btn {
-    background-color: #d9a274;
-    color: white;
+    background-color: #e0caa9;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
     cursor: pointer;
-    align-self: flex-end;
+    float: right;
+    position: relative;
+    top: -55px;
+    left: -10px;
+}
+
+.CLine {
+    display: flex;
+    
 }
