@@ -78,12 +78,28 @@ h1 {
     margin-bottom: 20px;
     width: fit-content;
     height: fit-content;
-  margin-left: 25%;
-    background-color: red;
+  margin-left: 30%;
+    margin-top: 5%;
     width: 60%;
 }
 .ALine,.BLine{
 display: flex;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: #F9F4C7; /* Color de fondo del círculo */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000; /* Borde negro */
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: black;
+    font-size: 10px;
 }
 
 
@@ -92,28 +108,45 @@ display: flex;
 .info-item {
     background-color: #e0caa9;
     padding: 10px;
+    
     border-radius: 20px;
     width: fit-content;
     margin: 10px;
+    height: fit-content;
+    
+}
+.info-item strong {
+    display: flex;
+    padding-right:5px;
+}
 
+.LastPart {
+    display: flex;
+    
 }
 
 
+
+.info-grid {
+    scale: 1.5;
+}
 
 .contact-btn {
     background-color: #e0caa9;
     border: none;
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
-    float: right;
-    position: relative;
-    top: -55px;
-    left: -10px;
+    margin-top: 10px;
+    margin-left: 70px;
 }
 
 .CLine {
     display: flex;
     
+}
+
+.ContactB {
+margin-left: 100px ;
 }
