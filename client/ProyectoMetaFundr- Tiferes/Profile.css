@@ -12,7 +12,6 @@ body {
     align-items: center;
     height: 100vh;
 }
-
 .profile-card {
     background-color: #faf3d9;
     border-radius: 12px;
@@ -35,26 +34,28 @@ body {
 
 .profile-pic {
     border-radius: 50%;
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
     margin-left: 15px;
 }
 
 h1 {
-    font-size: 18px;
+    font-size: 38px;
     color: #333;
     margin-left: 10px;
     flex-grow: 1;
-    margin-left: 6%;
+    margin-left: 14%;
 }
 
 .follow-btn {
     background-color: #e0caa9;
     border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: bold;
+    padding: 8px 40px;
+    border-radius: 25px;
+    font-size: 25px;
+    border: 1px  solid#000;
     cursor: pointer;
+    margin-right: 13.5%;
 }
 
 .tab-menu {
@@ -67,18 +68,21 @@ h1 {
     cursor: pointer;
     padding: 5px 10px;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .tab-menu .active {
     font-weight: bold;
     border-bottom: 2px solid #333;
+    width: 160px;
+    text-align: center;
 }
 
 .info-grid {
     margin-bottom: 20px;
     width: fit-content;
     height: fit-content;
-  margin-left: 30%;
+  margin-left: 33%;
     margin-top: 5%;
     width: 60%;
 }
@@ -95,7 +99,7 @@ display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #000; /* Borde negro */
-    margin-left: 10px;
+    margin-left: 1px;
     margin-right: 10px;
     cursor: pointer;
     color: black;
@@ -108,7 +112,7 @@ display: flex;
 .info-item {
     background-color: #e0caa9;
     padding: 10px;
-    
+    border: 0.5px solid #000;
     border-radius: 20px;
     width: fit-content;
     margin: 10px;
@@ -148,5 +152,9 @@ display: flex;
 }
 
 .ContactB {
-margin-left: 100px ;
+margin-left: 120px ;
+}
+
+.ContactB strong {
+    padding-right:10px ;
 }
