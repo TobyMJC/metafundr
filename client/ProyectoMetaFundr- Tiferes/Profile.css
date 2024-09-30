@@ -6,11 +6,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f6f1e3;
-    display: flex;
+    
+    background: linear-gradient(180deg, #ebad67 ,#633b0e);
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
 .profile-card {
     background-color: #faf3d9;
@@ -20,6 +21,8 @@ body {
     height: 85%;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     font-size: 14px;
+    margin-left: 4.5%;
+    scale: .9;
 }
 
 .header {
@@ -50,12 +53,12 @@ h1 {
 .follow-btn {
     background-color: #e0caa9;
     border: none;
-    padding: 8px 40px;
+    padding: 11px 45px;
     border-radius: 25px;
     font-size: 25px;
     border: 1px  solid#000;
     cursor: pointer;
-    margin-right: 13.5%;
+    margin-right: 15%;
 }
 
 .tab-menu {
@@ -132,7 +135,7 @@ display: flex;
 
 
 .info-grid {
-    scale: 1.5;
+    scale: 1.5; 
 }
 
 .contact-btn {
@@ -157,4 +160,81 @@ margin-left: 120px ;
 
 .ContactB strong {
     padding-right:10px ;
+}
+
+/*------------------------------*/
+
+
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.search-bar input[type="text"] {
+    width: 800px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.Glass {
+    position: relative;
+    left: -44px;
+    font-size: 150%;
+    margin-top:4px ;
+}
+
+.SearchI {
+    background-color: #fffdd0;
+    height: 40%;
+    margin-top: 6px;
+    border: 1px solid #000 ;
+    
+    
+    
+}
+input:focus {
+    outline: 1px solid black; /* Cambia el outline a negro */
+         /* Cambia el borde a negro (opcional) */
+  }     
+#redirect-user {
+    cursor: pointer;
+
+}
+
+.nav {
+    display: flex;
+}
+
+#redirect-icon {
+    cursor: pointer;
+}
+
+
+
+
+.circle1 {
+    width: 40px;
+    height: 40px;
+    background-color: #F9F4C7;
+    /* Color de fondo del círculo */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #000;
+    /* Borde negro */
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    font-size: 25px;
 }
