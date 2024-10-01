@@ -43,7 +43,7 @@ body {
     font-weight: bold;
 }
 
-form input {
+.SignUp-form input {
     width: 100%;
     padding: 10px;
     height: 37px;
@@ -59,16 +59,16 @@ form input {
     
 }
 
-form .dob {
+.SignUp-form .dob {
     display: flex;
     justify-content: space-between;
 }
 
-form .dob input {
+.SignUp-form .dob input {
     width: 30%;
 }
 
-form button {
+.SignUp-form button {
     background-color: #cc9054;
     color: white;
     padding: 10px;
@@ -80,7 +80,7 @@ form button {
     border: 1px solid black;
 }
 
-form button:hover {
+.SignUp-form button:hover {
     background-color: rgb(180, 112, 35);
     transition: 0.3s;
       
