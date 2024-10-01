@@ -7,6 +7,7 @@ from .serializers import RegisterSerializer
 from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
+
 # Create your views here.
 age_limit = date.today() - relativedelta(years=18)
 

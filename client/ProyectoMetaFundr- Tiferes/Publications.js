@@ -1,4 +1,5 @@
-let Publications =[]
+const userId = localStorage.getItem("user_id");
+console.log("ID del usuario obtenido:", userId);
 
 fetch('http://127.0.0.1:8000/api/posts/')
 .then((Response) => Response.json())
@@ -9,17 +10,17 @@ fetch('http://127.0.0.1:8000/api/posts/')
     console.log(err)
 })
 
-const crearBtn = document.getElementById("botonCrearid");
-crearBtn.addEventListener("click",subirPublicacion);
+
 
 function subirPublicacion (){
-    console.log("prueba")
     const nombre = document.getElementById("nombreId")
     const descripcion = document.getElementById("descripcionId")
     const etiqueta = document.getElementById("etiquetaId")
     const imagen = document.getElementById("imagenId")
 
-    const publicacion = {"title":nombre.value, "description":descripcion.value, "author":"tobi", "goal":0,"income":0}
+    console.log(nombre.value + descripcion.value)
+
+    const publicacion = {"title":nombre.value, "description":descripcion.value, "author_id": userid, "goal":0,"income":0}
 
     fetch('http://127.0.0.1:8000/api/posts/',
     {
