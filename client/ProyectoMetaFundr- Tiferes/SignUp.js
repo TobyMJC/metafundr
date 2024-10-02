@@ -64,6 +64,8 @@ async function RegistarUser() {
         localStorage.setItem("user_id", userId);
         console.log("ID del usuario:", userId);
         window.location.href = "Publications.html";
+
+
     } catch (error) {
         console.error('Error al registrar el usuario:', error);
     }
