@@ -20,7 +20,8 @@ function subirPublicacion (){
 
     console.log(nombre.value + descripcion.value)
 
-    const publicacion = {"title":nombre.value, "description":descripcion.value, "author_id": userId, "goal":0,"income":0}
+    console.log(userId)
+    const publicacion = {"title":nombre.value, "description":descripcion.value, "author": userId, "goal":0,"income":0}
 
     fetch('http://127.0.0.1:8000/api/posts/',
     {

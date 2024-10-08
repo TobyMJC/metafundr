@@ -3,7 +3,7 @@ from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken, RefreshToken
 from rest_framework import generics
-from .serializers import RegisterSerializer
+from .serializers import MetaUserSerializer
 from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
@@ -12,7 +12,7 @@ from dateutil.relativedelta import relativedelta
 age_limit = date.today() - relativedelta(years=18)
 
 class RegisterView(generics.GenericAPIView):
-    serializer_class = RegisterSerializer
+    serializer_class = MetaUserSerializer
 
     def post(self, request, *args, **kwargs):
         data = request.data.copy()
