@@ -47,7 +47,7 @@ body {
     width: 100%;
     padding: 10px;
     height: 37px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     border: none;
     border-radius: 5px;
     background-color: #ffed9f;
@@ -98,4 +98,35 @@ input::placeholder {
 }
 .LogoN {
     width: 20px;
+}
+
+.phone-container {
+    display: flex;
+    gap: 10px;
+}
+
+.country-code {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #ffed9f; /* Color amarillo claro */
+    font-size: 16px;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+
+}
+
+.phone-number {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #ffed9f; /* Color amarillo claro */
+    font-size: 16px;
+}
+
+.spacer{
+    width: 30px;
+    background-color: red;
 }
