@@ -10,7 +10,7 @@ body {
     background: linear-gradient(180deg, #ebad67 ,#633b0e);
     justify-content: center;
     align-items: center;
-    height: 96.1vh;
+    height: 110vh;
 
 }
 .profile-card {
@@ -18,11 +18,19 @@ body {
     border-radius: 20px;
     padding: 20px;
     width: 90%;
-    height: 85%;
+    height: fit-content;
+    padding-bottom: 100px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     font-size: 14px;
     margin-left: 4.5%;
-    scale: .9;
+    
+    margin-top:15px ;
+}
+.flecha{
+    font-size: 45px;
+     position: relative;
+     left: 1135px;
+     margin-top: 5px;
 }
 
 .header {
@@ -30,16 +38,20 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
-    
+    margin-top: -35px;
     height: 90px;
 }
 
-
+a {
+    text-decoration: none;
+    color: black;
+}
 .profile-pic {
     border-radius: 50%;
-    width: 75px;
-    height: 75px;
-    margin-left: 15px;
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    border: 1px solid black;
 }
 
 h1 {
@@ -262,4 +274,9 @@ input:focus {
 .menu-item.active {
     
     border-bottom: 2px solid white; /* Subrayado en el elemento activo */
+}
+.linker {
+    text-decoration: none;
+    
+    color: black;
 }

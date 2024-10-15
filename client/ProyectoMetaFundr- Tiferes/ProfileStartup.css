@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     
-    background: linear-gradient(180deg, #ebad67 ,#633b0e);
+    background: linear-gradient(180deg, #96652e ,#3f2910);
     justify-content: center;
     align-items: center;
     height: fit-content;
@@ -32,16 +32,30 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
-
     height: 90px;
+    margin-top: -30px;
 }
-
-
+a {
+    text-decoration: none;
+    color: black;
+}
+.flecha{
+    font-size: 45px;
+     position: relative;
+     left: 1156px;
+     margin-top: 5px;
+}
 .profile-pic {
     border-radius: 50%;
-    width: 75px;
-    height: 75px;
-    margin-left: 15px;
+    width: 80px;
+    height: 80px;
+    margin-left: 30px;
+    border: 1px solid black;
+}
+.linker {
+    text-decoration: none;
+    z-index: 10;
+    color: black;
 }
 
 h1 {
@@ -62,6 +76,8 @@ h1 {
     cursor: pointer;
     margin-right: 15%;
 }
+
+
 
 .tab-menu {
     display: flex;
@@ -189,13 +205,14 @@ h1 {
 
 
 .ContactB {
-margin-left: 520px ;
+margin-left: 440px ;
 position: relative;
-top: -60px;
+top: -40px;
+
 }
 
 .ContactB strong {
-    padding-right:10px ;
+padding: 0px 10px ;
 }
 
 /*------------------------------*/

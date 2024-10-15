@@ -61,13 +61,25 @@ a {
 .header .customize {
     font-size: 16px;
 }
-
-.texts {
+.menu {
     display: flex;
-    margin-left: -30%;
-    padding: 20px;
+    justify-content: space-between;
+    margin:  0px 150px;
+    margin-right: 250px;
     width: 100%;
-    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    
+}
+.active {
+    border-bottom: 2px solid #000;
+    width: 140px;
+    text-align: center;
+}
+.menu-item {
+    color: black;
+    font-size: 18px;
+    position: relative;
 }
 #Nombre,#apellido,#Mail,#pais-residencia {
     background-color: white !important;
