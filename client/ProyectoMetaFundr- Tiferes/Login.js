@@ -1,6 +1,6 @@
 async function LoginUser() {
     let usuario = {
-        username: document.getElementById("EmailInput").value,
+        email: document.getElementById("EmailInput").value,
         password: document.getElementById("PasswordInput").value
     };
 
