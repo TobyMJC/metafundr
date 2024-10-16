@@ -24,11 +24,8 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
         fields= 'id', 'title', 'description', 'goal', 'income', 'thumbnail', 'author' 
         
-    def get_author_username(self, obj):
-        return obj.author.username
-    
     def to_representation(self, instance):
-        self.fields['author'] =  MetaUserSerializer(read_only=True)
+        self.fields['author'] = MetaUserSerializer(read_only=True)
         return super(PostSerializer, self).to_representation(instance)
 
 class PostViewSet(viewsets.ModelViewSet):
