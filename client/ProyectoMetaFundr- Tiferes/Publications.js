@@ -12,32 +12,40 @@ fetch('http://127.0.0.1:8000/api/posts/')
 
 
 
-function subirPublicacion (){
-    const nombre = document.getElementById("nombreId")
-    const descripcion = document.getElementById("descripcionId")
-    const etiqueta = document.getElementById("etiquetaId")
-    const imagen = document.getElementById("imagenId")
+function subirPublicacion() {
+    const nombre = document.getElementById("nombreId").value;
+    const descripcion = document.getElementById("descripcionId").value;
+    const etiqueta = document.getElementById("etiquetaId").value;
+    const imagen = document.getElementById("imagenId").value;
+    const fileInput = document.getElementById("fileInput"); 
+    const file = fileInput.files[0]; 
+    console.log(nombre + descripcion);
+    console.log(userId);
 
-    console.log(nombre.value + descripcion.value)
-
-    console.log(userId)
-    const publicacion = {"title":nombre.value, "description":descripcion.value, "author": userId, "goal":0,"income":0}
-
-    fetch('http://127.0.0.1:8000/api/posts/',
-    {
-        method:'POST',
-        body: JSON.stringify(publicacion),
-        headers: {"Content-type": "application/json; charset=UTF-8"}
+    const formData = new FormData();
+    formData.append("title", nombre);
+    formData.append("description", descripcion);
+    formData.append("author", userId);
+    formData.append("goal", 0);
+    formData.append("income", 0);
+    formData.append("thumbnail", file); 
+    fetch('http://127.0.0.1:8000/api/posts/', {
+        method: 'POST',
+        body: formData, 
+        headers: {
+            "Authorization": `Bearer ${localStorage.getItem('access_token')}` 
+        }
     })
     .then((response) => response.json())
-    .then((salida)=> {
-        console.log(salida)  
-        nombre.innerHTML=""
-    }).catch(err => {
-        console.log(err)
+    .then((salida) => {
+        console.log(salida);
+        document.getElementById("nombreId").value = "";
+        document.getElementById("descripcionId").value = "";
+        document.getElementById("etiquetaId").value = "";
+        document.getElementById("imagenId").value = "";
+        fileInput.value = ""; 
     })
-    nombre.value=""
-    descripcion.value=""
-    etiqueta.value=""
-    imagen.value=""
+    .catch(err => {
+        console.log(err);
+    });
 }
