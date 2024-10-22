@@ -12,13 +12,15 @@
             <img src="Logo.png" alt="Logo">
         </div>
         <div class="login-form">
-            <input type="email" placeholder="E-Mail" required>
-            <input type="password" placeholder="Password" required>
+            <input id="EmailInput" type="text" placeholder="E-Mail" required>
+            <input id="PasswordInput" type="password" placeholder="Password" required>
             <a href="#" class="forgot-password">Forgot password</a>
-            <button type="submit" class="login-btn">Log-In</button>
+            <button onclick="LoginUser()" type="submit" class="login-btn">Log-In</button>
             <button   onclick="location.href='SignUp.html'"    type="button" class="register-btn">Register</button>
         </div>
       
     </div>
+    <script src="Login.js"></script>
+
 </body>
 </html>
