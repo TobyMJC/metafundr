@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    scale: 0.7;
+    
+}
+
+.left-panel {
+    width: 50%;
+    background-image: url('projectImage.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    
+}
+
+.left-panel h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.right-panel {
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.profile h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.section p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comments h3 {
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.comment-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.comment-box input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.comment-box button {
+    background-color: #f5a623;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.comment-box button i {
+    color: white;
+}

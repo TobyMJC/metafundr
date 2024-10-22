@@ -102,6 +102,9 @@ h2 {
     flex-wrap: wrap;
 }
 
+.projects a {
+    text-decoration: none;
+}
 
 .project {
     background-color: #654531;
