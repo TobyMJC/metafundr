@@ -22,11 +22,14 @@ class MetaUserSerializer(serializers.ModelSerializer):
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields= 'id', 'title', 'description', 'goal', 'income', 'thumbnail', 'author' 
+        fields= 'id', 'title', 'description', 'goal', 'income', 'thumbnail', 'author', 'comments' 
         
     def to_representation(self, instance):
         self.fields['author'] = MetaUserSerializer(read_only=True)
         return super(PostSerializer, self).to_representation(instance)
+    
+    def get_comments(self):
+        return self.postcomment_set.all()
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
