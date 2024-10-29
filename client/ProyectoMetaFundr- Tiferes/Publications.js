@@ -13,6 +13,7 @@ fetch('http://127.0.0.1:8000/api/posts/')
 
 
 function subirPublicacion() {
+    console.log(localStorage.getItem('access_token'))
     const nombre = document.getElementById("nombreId").value;
     const descripcion = document.getElementById("descripcionId").value;
     const etiqueta = document.getElementById("etiquetaId").value;
@@ -36,7 +37,12 @@ function subirPublicacion() {
             "Authorization": `Bearer ${localStorage.getItem('access_token')}` 
         }
     })
-    .then((response) => response.json())
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(`Error ${response.status}: ${response.statusText}`);
+        }
+        return response.json();
+    })    
     .then((salida) => {
         console.log(salida);
         document.getElementById("nombreId").value = "";

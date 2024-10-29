@@ -22,7 +22,7 @@ class MetaUserSerializer(serializers.ModelSerializer):
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields= 'id', 'title', 'description', 'goal', 'income', 'thumbnail', 'author', 'comments' 
+        fields= 'id', 'title', 'description', 'goal', 'income', 'thumbnail', 'author'
         
     def to_representation(self, instance):
         self.fields['author'] = MetaUserSerializer(read_only=True)
