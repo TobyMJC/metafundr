@@ -9,39 +9,35 @@
 <body>
     <div class="form-container">
         <div class="form-box">
-            <button onclick="location.href='LogIn.html'"   class="back-button"><img src="Flecha.png" alt="" class="Flecha"></button>
-            <div class="logo"> <img class="LogoN" src="LogoN.png" alt="Logo"></div>
-            <div class="SignUp-div id="form-register"">
-
-                <input type="text" placeholder="Name" class="input-field">
-                <input type="text" placeholder="Last Name" class="input-field">
+            <button onclick="location.href='LogIn.html'" class="back-button">
+                <img src="Flecha.png" alt="Back" class="Flecha">
+            </button>
+            <div class="logo">
+                <img class="LogoN" src="LogoN.png" alt="Logo">
+            </div>
+            <div class="SignUp-div" id="form-register">
+                <input type="text" placeholder="Name" class="input-field" required>
+                <input type="text" placeholder="Last Name" class="input-field" required>
                 <div class="phone-container">
-                    <select class="country-code">
-                        <option value="+54">+54</option>
-                         
+                    <select class="country-code " required>
+                        <option    value="+54">+54</option>
                     </select>
-                    
-                    <input type="tel" placeholder="Number" class="phone-number">
+                    <input type="tel" placeholder="Number" class="phone-number" required>
                 </div>
-
-
-
                 <input id="UsernameId" type="text" placeholder="Username" required>
                 <input id="EmailId" type="email" placeholder="E-Mail" required>
                 <label class="DB">Date of Birth</label>
                 <div class="dob">
-                    
-                    <input id="DiaId" type="text" placeholder="DD" maxlength="2" >
-                    <input id="MesID" type="text" placeholder="MM" maxlength="2" >
-                    <input id="AnoId" type="text" placeholder="YYYY" maxlength="4" >
+                    <input id="DiaId" type="text" placeholder="DD" maxlength="2" required>
+                    <input id="MesID" type="text" placeholder="MM" maxlength="2" required>
+                    <input id="AnoId" type="text" placeholder="YYYY" maxlength="4" required>
                 </div>
                 <input id="PasswordId" type="password" placeholder="Password" required>
                 <input type="password" placeholder="Confirm Password" required>
-                <button onclick="RegistarUser()" id="LogInBtn">Register</button>
+               <a href="Main.html"> <button onclick="RegistarUser()" id="LogInBtn">Register</button></a>
             </div>
         </div>
     </div>
-
     <script src="SignUp.js"></script>
 </body>
 </html>
