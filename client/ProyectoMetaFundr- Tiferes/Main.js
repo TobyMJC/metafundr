@@ -2,8 +2,9 @@
     window.location.href = 'Publications.html';
 });
 
-    document.getElementById('search-button').addEventListener('click', function() {
-    window.location.href = 'MainBusqueda.html';
+document.getElementById('search-button').addEventListener('click', function() {
+    const searchQuery = document.querySelector('.SearchI').value;
+    window.location.href = `MainBusqueda.html?username=${encodeURIComponent(searchQuery)}`;
 });
 document.getElementById('redirect-user').addEventListener('click', function() {
     window.location.href = 'headerUser.html';
@@ -28,10 +29,19 @@ fetch(`http://localhost:8000/api/posts/`)
             const newP = document.createElement('p');
             newP.textContent = publicacion.title; 
             newDiv.appendChild(newP);
+        
+            // Añadir el evento de clic para redirigir a la página de detalles
+            newDiv.addEventListener('click', () => {
+                window.location.href = `Project.html?id=${publicacion.id}`;
+            });
+        
             projectsContainer.appendChild(newDiv);
         });
+        
     })
     .catch((error) => {
         console.error('Error al obtener las publicaciones:', error);
     });
+
+    
 

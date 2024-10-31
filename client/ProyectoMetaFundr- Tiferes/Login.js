@@ -1,3 +1,39 @@
+function obtenerIdUsuario() {
+    const accessToken = localStorage.getItem("access_token");
+
+    if (!accessToken) {
+        console.error("No se encontró el token de acceso");
+        return;
+    }
+
+    return fetch('http://localhost:8000/dj-rest-auth/user/', { 
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${accessToken}` 
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al obtener el ID del usuario');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Datos del usuario:', data);
+        // Cambia el acceso al campo correcto del ID
+        const userId = data.pk || data.user?.pk;
+        if (userId) {
+            console.log('ID del usuario:', userId);
+            return { pk: userId }; // Devuelve el ID del usuario
+        } else {
+            throw new Error('No se pudo encontrar el ID del usuario');
+        }
+    })
+    .catch(error => {
+        console.error('Error al obtener el ID del usuario:', error);
+    });
+}
 async function LoginUser() {
     let usuario = {
         email: document.getElementById("EmailInput").value,
@@ -5,6 +41,8 @@ async function LoginUser() {
     };
 
     try {
+        console.log("Datos del usuario que se enviarán:", usuario);
+
         const response = await fetch('http://localhost:8000/dj-rest-auth/login/', {
             method: 'POST',
             headers: {
@@ -20,8 +58,7 @@ async function LoginUser() {
                     console.error('Error de autenticación:', errorData.detail);
                     alert('Credenciales incorrectas. Por favor, verifica tu email y contraseña.');
                 } else {
-                    console.error('Error desconocido durante el inicio de sesión');
-                    alert('Error desconocido. Inténtalo nuevamente.');
+                    console.error('Error desconocido durante el inicio de sesión', errorData);
                 }
             } else {
                 throw new Error('Error en el servidor');
@@ -32,15 +69,20 @@ async function LoginUser() {
         const data = await response.json();
         console.log('Usuario logueado:', data);
 
-        localStorage.setItem("access_token", data.access_token);
-        console.log("Access token guardado:", data.access_token);
+        // Guarda el access token
+        localStorage.setItem("access_token", data.access);
+        console.log("Access token guardado:", data.access);
 
+        // Obtén los datos del usuario
         const userData = await obtenerIdUsuario();
-        const userId = userData.pk;  
-        localStorage.setItem("user_id", userId);
-        console.log("ID del usuario:", userId);
+        if (userData) {
+            const userId = userData.pk;  
+            localStorage.setItem("user_id", userId);
+            console.log("ID del usuario:", userId);
 
-        window.location.href = "Publications.html";
+            // Redirige al usuario
+            window.location.href = "Publications.html";
+        }
 
     } catch (error) {
         console.error('Error al iniciar sesión:', error);

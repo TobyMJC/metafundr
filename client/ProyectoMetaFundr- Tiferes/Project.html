@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App de Gestión de Tareas</title>
+    <title>Detalles de la Publicación</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="Project.css">
 </head>
 <body>
     <div class="container">
         <div class="left-panel">
-            <i class="fas fa-arrow-left back-button"></i>
-            <h1>APP DE GESTIÓN DE TAREAS</h1>
+            <img id="Foto.project">
+            <i class="fas fa-arrow-left back-button" onclick="window.history.back()"></i>
+            <h1 id="project-title">Título del Proyecto</h1>
         </div>
         <div class="right-panel">
             <div class="profile">
-                <img src="https://storage.googleapis.com/a1aa/image/9onGDXu2FRp4D5SZngCTASV7Nfca2otb8Fs12HresPe6yoSnA.jpg" alt="Profile picture of Lionel Andres Messi" width="50" height="50">
-                <h2>Lionel Andres Messi</h2>
+                <img id="project-thumbnail" alt="Imagen del Proyecto" width="50" height="50">
+                <h2 id="project-author">Autor del Proyecto</h2>
             </div>
             <div class="section">
                 <h3>Descripción</h3>
-                <p>Es una aplicación de gestión de tareas que ayuda a individuos y equipos a organizar, priorizar y completar actividades diarias de manera eficiente. Su interfaz intuitiva permite a los usuarios crear tareas con descripciones, fechas de vencimiento y etiquetas personalizables, y agruparlas en proyectos específicos. La aplicación incluye un sistema de clasificación por prioridad, colaboración en equipo y recordatorios automáticos, lo que permite a los usuarios mantenerse enfocados y actualizar su progreso en tiempo real.</p>
-                <p>TaskMaster se integra con calendarios para tareas prioritarias y envía recordatorios automáticos para evitar retrasos. La sincronización con calendarios y otras herramientas de productividad, junto con APIs para integrarse con flujos de trabajo existentes, hace que TaskMaster se adapte a diversos entornos de trabajo.</p>
-                <p>Por último, incluye análisis y reportes que permiten evaluar el rendimiento del equipo y el progreso de las tareas, ayudando a identificar áreas de mejora. Con el objetivo de mejorar la organización y eficiencia, TaskMaster se convierte en una herramienta indispensable para quienes buscan mejorar su organización y eficiencia.</p>
-                            </div>
-            <div class="comments Respuesta">
+                <p id="project-description">Descripción del proyecto...</p>
+            </div>
+            <div class="comments">
                 <h3>Comentarios</h3>
-                <p><strong>¿Cuáles son las características más destacadas de la aplicación?</strong></p>
-                <p>Hola, TaskMaster destaca por su interfaz intuitiva que facilita la creación y gestión de tareas con descripciones, fechas de vencimiento y etiquetas personalizables. Incluye un sistema de clasificación por prioridad, colaboración en equipo, y recordatorios automáticos. También ofrece sincronización con calendarios, análisis y reportes sobre el rendimiento.</p>
                 <div class="comment-box">
-                    <input type="text" placeholder="Hacer un comentario">
+                    <input id="InputComent" type="text" placeholder="Hacer un comentario">
                     <button><i class="fas fa-paper-plane"></i></button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="Project.js"></script>
 </body>
 </html>
