@@ -26,7 +26,6 @@ function subirPublicacion() {
     const formData = new FormData();
     formData.append("title", nombre);
     formData.append("description", descripcion);
-    formData.append("author", userId);
     formData.append("goal", 0);
     formData.append("income", 0);
     formData.append("thumbnail", file); 
