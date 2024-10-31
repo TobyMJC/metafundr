@@ -9,7 +9,9 @@ body {
 .container {
     display: flex;
     width: 100%;
+    border-radius: 30px;
     scale: 0.7;
+    
     
 }
 
@@ -23,6 +25,8 @@ body {
     display: flex;
     align-items: flex-end;
     padding: 20px;
+    border-start-start-radius: 50px;
+    border-bottom-left-radius: 50px;
     
 }
 
@@ -45,6 +49,8 @@ body {
     background-color: white;
     padding: 20px;
     overflow-y: auto;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .profile {
@@ -98,6 +104,8 @@ body {
     border-radius: 25px;
     padding: 10px;
     margin-top: 10px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+
 }
 
 .comment-box input {
