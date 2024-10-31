@@ -2,5 +2,5 @@
     "python.analysis.extraPaths": [
         "./metafundr/server/Lib/site-packages"
     ],
-    "python.pythonPath": "C:\\Users\\facun\\AppData\\Local\\Microsoft\\WindowsApps\\python3.9.exe"
+    "python.pythonPath": "server\\Scripts\\python.exe"
 }
