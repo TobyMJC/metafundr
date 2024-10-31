@@ -1,5 +1,6 @@
-from .models import MetaUser, Post
+from .models import MetaUser, Post, PostComment
 from rest_framework import serializers, viewsets
+from rest_framework.exceptions import NotAuthenticated
 
 class MetaUserSerializer(serializers.ModelSerializer): 
     class Meta:
@@ -19,18 +20,37 @@ class MetaUserSerializer(serializers.ModelSerializer):
         )
         return user
 
+class PostCommentSerializer(serializers.ModelSerializer):
+    author = MetaUserSerializer(read_only=True)
+
+    class Meta:
+        model = PostComment
+        fields = ['author', 'content', 'answer', 'post']
+
 class PostSerializer(serializers.ModelSerializer):
+    comments = PostCommentSerializer(source='postcomment_set', many=True, read_only=True)
+    author = MetaUserSerializer(read_only=True)
+
     class Meta:
         model = Post
-        fields= 'id', 'title', 'description', 'goal', 'income', 'thumbnail', 'author'
-        
-    def to_representation(self, instance):
-        self.fields['author'] = MetaUserSerializer(read_only=True)
-        return super(PostSerializer, self).to_representation(instance)
-    
-    def get_comments(self):
-        return self.postcomment_set.all()
-
+        fields= 'id', 'title', 'description', 'goal', 'income', 'thumbnail', 'author', 'comments'
+     
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    
+    def perform_create(self, serializer):
+        if self.request.user.is_authenticated:
+            serializer.save(author=self.request.user)
+        else:
+            raise NotAuthenticated("You are not authenticated")
+
+class PostCommentViewSet(viewsets.ModelViewSet):
+    queryset = PostComment.objects.all()
+    serializer_class = PostCommentSerializer
+    
+    def perform_create(self, serializer):
+        if self.request.user.is_authenticated:
+            serializer.save(author=self.request.user)
+        else:
+            raise NotAuthenticated("You are not authenticated")
