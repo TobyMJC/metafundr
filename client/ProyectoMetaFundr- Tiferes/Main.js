@@ -3,8 +3,11 @@
 });
 
 document.getElementById('search-button').addEventListener('click', function() {
-    const searchQuery = document.querySelector('.SearchI').value;
-    window.location.href = `MainBusqueda.html?username=${encodeURIComponent(searchQuery)}`;
+    const searchQuery = document.getElementById('buscador').value;
+    localStorage.setItem("busqueda",searchQuery);
+    const localbusqueda = localStorage.getItem('busqueda');
+    console.log(localbusqueda);
+    window.location.href = 'MainBusqueda.html';
 });
 document.getElementById('redirect-user').addEventListener('click', function() {
     window.location.href = 'headerUser.html';
