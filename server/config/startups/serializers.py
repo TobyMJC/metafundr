@@ -1,6 +1,7 @@
 from .models import MetaUser, Post, PostComment
-from rest_framework import serializers, viewsets
-from rest_framework.exceptions import NotAuthenticated
+from rest_framework.response import Response
+from rest_framework import serializers, viewsets, status
+from rest_framework.exceptions import NotAuthenticated, PermissionDenied
 
 class MetaUserSerializer(serializers.ModelSerializer): 
     class Meta:
@@ -27,6 +28,10 @@ class PostCommentSerializer(serializers.ModelSerializer):
         model = PostComment
         fields = ['author', 'content', 'answer', 'post']
 
+    def create(self, validated_data):
+        validated_data.pop('answer', None)  
+        return super().create(validated_data)
+
 class PostSerializer(serializers.ModelSerializer):
     comments = PostCommentSerializer(source='postcomment_set', many=True, read_only=True)
     author = MetaUserSerializer(read_only=True)
@@ -34,7 +39,7 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields= 'id', 'title', 'description', 'goal', 'income', 'thumbnail', 'author', 'comments'
-     
+
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
@@ -54,3 +59,19 @@ class PostCommentViewSet(viewsets.ModelViewSet):
             serializer.save(author=self.request.user)
         else:
             raise NotAuthenticated("You are not authenticated")
+
+
+    def update(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            raise NotAuthenticated("You are not authenticated")
+
+        instance = self.get_object()
+
+        if request.user != instance.post.author:
+            raise PermissionDenied("You are not the author of the post")
+
+        serializer = self.serializer_class(instance, data=request.data, partial = True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response("OK", status=status.HTTP_200_OK)
+
