@@ -13,7 +13,6 @@ def default_date_of_birth():
     return timezone.now().date() - timedelta(days=18*365)
 
 class MetaUser(AbstractUser, PermissionsMixin):
-    
     username = models.CharField(max_length=255, unique=True)
     email = models.EmailField(unique=True, default="placeholder@example.com")
 
@@ -36,7 +35,7 @@ class Post(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=64, default="Title")
     description = models.TextField(max_length = 3000, default="Description")
-    author = models.ForeignKey(MetaUser, on_delete = models.PROTECT)
+    author = models.ForeignKey(MetaUser, on_delete = models.CASCADE)
     thumbnail = models.ImageField(blank=True, upload_to="posts/")
     goal = models.IntegerField(default=1000)
     income = models.IntegerField(default=0)
@@ -51,5 +50,6 @@ def delete(sender, instance, using, **kwargs):
 
 class PostComment(models.Model):
     post = models.ForeignKey(Post, on_delete = models.CASCADE)
-    author = models.ForeignKey(MetaUser, on_delete = models.PROTECT)
+    author = models.ForeignKey(MetaUser, on_delete = models.CASCADE)
     content = models.CharField(max_length=1000)
+    answer = models.CharField(max_length=20000, null=True)
