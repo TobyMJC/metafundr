@@ -21,11 +21,29 @@ body {
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 400px;
+    width: 450px;
     position: relative;
     text-align: center;
 }
+.form-box input {
+    width: 80%;
+    padding: 10px;
+    margin: 4px 5px;
+    border: 1px solid BLACK;
+    border-radius: 20px;
+    background-color: #ffed9f; /* Color amarillo claro */
+    font-size: 16px;
+}
 
+#LogInBtn{
+    width: 35%;
+    padding: 10px;
+    margin: 4px 5px;
+    border: 1px solid BLACK;
+    border-radius: 20px;
+    background-color: #e29531; /* Color amarillo claro */
+    font-size: 16px;
+}
 .back-button {
     background: none;
     border: none;
@@ -60,8 +78,11 @@ body {
 }
 
 .SignUp-form .dob {
-    display: flex;
-    justify-content: space-between;
+    display: flex ;
+    justify-content: space-between ;
+}
+ .dob input{
+    width: 21%;
 }
 
 .SignUp-form .dob input {
@@ -88,9 +109,15 @@ body {
 
 .DB {
    display: flex;
-   margin-bottom:5px ;
+   margin-bottom:5px;
+   margin-top: 10px;
    color: #666;
+   margin-left: 38px;
+
    
+}
+button{
+    cursor: pointer !important;
 }
 
 input::placeholder {
@@ -103,10 +130,14 @@ input::placeholder {
 .phone-container {
     display: flex;
     gap: 10px;
+    width: 386px;
+    margin-top: 2px;
+    margin-left: 35px;
 }
 
+
 .country-code {
-    padding: 10px;
+    padding: 0px 20px;
     border: 1px solid black;
     border-radius: 20px;
     background-color: #ffed9f; /* Color amarillo claro */
@@ -114,17 +145,12 @@ input::placeholder {
     height: 40px;
     width: 120px;
     text-align: center;
-
+    position: relative;
+    top: 4px;
 }
 
-.phone-number {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    background-color: #ffed9f; /* Color amarillo claro */
-    font-size: 16px;
-}
+
+
 
 .spacer{
     width: 30px;
