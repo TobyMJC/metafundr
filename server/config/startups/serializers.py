@@ -26,7 +26,8 @@ class PostCommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PostComment
-        fields = ['author', 'content', 'answer', 'post']
+        fields = ['id', 'author', 'content', 'answer', 'post']
+        read_only_fields = ['id']
 
     def create(self, validated_data):
         validated_data.pop('answer', None)  

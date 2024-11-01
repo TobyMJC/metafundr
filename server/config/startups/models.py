@@ -50,6 +50,7 @@ def delete(sender, instance, using, **kwargs):
         instance.thumbnail.delete()
 
 class PostComment(models.Model):
+    id = models.IntegerField(primary_key=True)
     post = models.ForeignKey(Post, on_delete = models.CASCADE)
     author = models.ForeignKey(MetaUser, on_delete = models.CASCADE)
     content = models.CharField(max_length=1000)
