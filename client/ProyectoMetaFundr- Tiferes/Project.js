@@ -4,11 +4,37 @@ const userId = localStorage.getItem("user_id");
 let authormail;
 let usermail;
 
-fetch(`http://localhost:8000/dj-rest-auth/user/${userId}`)
+fetch(`http://localhost:8000/dj-rest-auth/user/`, {
+  method: "GET",
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem("access_token")}`,
+    "Content-Type": "application/json"
+  }
+})
   .then((response) => response.json())
   .then((user) => {
     usermail = user.email;
+    console.log(usermail); 
+  })
+  .catch((error) => console.error("Error:", error));
+
+
+fetch(`http://localhost:8000/api/posts/${projectId}`)
+  .then((response) => response.json())
+  .then((publicacion) => {
+    authormail = publicacion.author.email;
+    document.getElementById("project-title").textContent = publicacion.title;
+    document.getElementById("project-description").textContent =
+      publicacion.description;
+    document.getElementById("project-author").textContent =
+      publicacion.author.username;
+    document.getElementById("project-thumbnail").src = publicacion.thumbnail;
+    document.querySelector(".left-panel").style.backgroundImage = `url(${publicacion.thumbnail})`;
+  })
+  .catch((error) => {
+    console.error("Error al cargar los detalles de la publicación:", error);
   });
+
 
 function PostComent() {
   const Contenido = document.getElementById("InputComent").value;
@@ -51,6 +77,9 @@ fetch(`http://localhost:8000/api/comments/`)
   .then((datos2) => {
     console.log("datos fetch", datos2);
     comments = datos2;
+    console.log("el mail de usuario", usermail);
+    console.log("mail author", authormail);
+    console.log("id usuario", userId)
 
     const commentsContainer = document.getElementById("comments-container");
 
@@ -69,7 +98,6 @@ fetch(`http://localhost:8000/api/comments/`)
         comment.appendChild(newP);
         comment.appendChild(newres);
         if (!comentario.answer && usermail == authormail) {
-          //Si no hay respuesta
           const inputRespuesta = document.createElement("input");
           const button = document.createElement("button");
           button.textContent = "Responder";
@@ -115,20 +143,4 @@ fetch(`http://localhost:8000/api/comments/`)
     console.error("Error al cargar los comentarios:", error);
   });
 
-fetch(`http://localhost:8000/api/posts/${projectId}`)
-  .then((response) => response.json())
-  .then((publicacion) => {
-    authormail = publicacion.author.email;
-    document.getElementById("project-title").textContent = publicacion.title;
-    document.getElementById("project-description").textContent =
-      publicacion.description;
-    document.getElementById("project-author").textContent =
-      publicacion.author.username;
-    document.getElementById("project-thumbnail").src = publicacion.thumbnail;
-    document.querySelector(
-      ".left-panel"
-    ).style.backgroundImage = `url(${publicacion.thumbnail})`;
-  })
-  .catch((error) => {
-    console.error("Error al cargar los detalles de la publicación:", error);
-  });
+
