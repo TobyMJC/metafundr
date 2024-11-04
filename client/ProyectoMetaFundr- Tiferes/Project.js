@@ -3,6 +3,15 @@ const projectId = urlParams.get("id");
 const userId = localStorage.getItem("user_id");
 let authormail;
 let usermail;
+const isLoggedIn = localStorage.getItem('access_token') !== null;
+
+function redirectToProfile() {
+  window.location.href = 'ProfileStartup.html';
+}
+
+function redirectToMain() {
+  window.location.href = 'Main.html';
+}
 
 fetch(`http://localhost:8000/dj-rest-auth/user/`, {
   method: "GET",
@@ -30,11 +39,40 @@ fetch(`http://localhost:8000/api/posts/${projectId}`)
       publicacion.author.username;
     document.getElementById("project-thumbnail").src = publicacion.thumbnail;
     document.querySelector(".left-panel").style.backgroundImage = `url(${publicacion.thumbnail})`;
+
+    if (usermail === authormail) {
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "Borrar Publicación";
+      deleteButton.id = "Delete-button";
+      deleteButton.onclick = deletePost; // Asocia la función deletePost
+
+      // Agrega el botón a la sección de perfil
+      const profileDiv = document.querySelector('.profile');
+      profileDiv.appendChild(deleteButton);
+    }
   })
   .catch((error) => {
     console.error("Error al cargar los detalles de la publicación:", error);
   });
 
+  function deletePost() {
+    fetch(`http://localhost:8000/api/posts/${projectId}/`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("access_token")}`,
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
+        }
+        redirectToMain();
+      })
+      .catch((error) => {
+        console.error("Error al eliminar la publicación:", error);
+        alert("No se pudo eliminar la publicación.");
+      });
+  }
 
 function PostComent() {
   const Contenido = document.getElementById("InputComent").value;
@@ -97,7 +135,7 @@ fetch(`http://localhost:8000/api/comments/`)
         console.log(newP);
         comment.appendChild(newP);
         comment.appendChild(newres);
-        if (!comentario.answer && usermail == authormail) {
+        if (!comentario.answer && usermail == authormail && isLoggedIn) {
           const inputRespuesta = document.createElement("input");
           const button = document.createElement("button");
           button.textContent = "Responder";

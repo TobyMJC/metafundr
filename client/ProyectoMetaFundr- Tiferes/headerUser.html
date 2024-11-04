@@ -6,12 +6,6 @@
     <title>Perfil y Personalizar</title>
     <link rel="stylesheet" href="headerUser.css">
     <script src="https://kit.fontawesome.com/fac6908e9f.js" crossorigin="anonymous"></script>
-    <script>
-        // Redirige a main.html cuando se haga clic en la flecha hacia atrás
-        function goBack() {
-            window.location.href = 'main.html';
-        }
-    </script>
 </head>
 <body>
     <!-- Header de la primera pantalla -->
@@ -78,9 +72,10 @@
                 <input type="text" id="primer-registro" value="08/05/24" readonly>
             </div>
             <div>
-                <button class="center-button">Cambiar a Empresa</button>
+                <button id="logout-button" class="center-button">log out</button>
             </div>
         </div>
     </div>
+    <script src="HeaderUser.js"></script>
 </body>
 </html>
