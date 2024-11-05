@@ -9,8 +9,8 @@
 </head>
 <body>
    <div class="header">
-    <div class="circle">
-    <a href="Main.html">   <i class="fas fa-arrow-left arrowback"></i></a> 
+    <div class="circle BACK" onclick="window.history.back()">
+       <i class="fas fa-arrow-left arrowback"></i> 
     </div>
 <div class="circle">
     <i class="fas fa-plus plus"></i>
@@ -25,10 +25,10 @@
     
     <div class="preview-container">
         <input id="descripcionId" type="text" class="preview-box" placeholder="Descripcion"></input>
-       <img src="damero.png" alt="" class="img">
+       <img src="imagenVacia.png" alt="" class="img">
     </div>
     <div class="tags-image-container">
-        <input id="etiquetaId" class="Aobj" type="text" placeholder="Añadir Imagen" onclick="document.getElementById('fileInput').click()">
+        <input id="etiquetaId" class="Aobj" type="text" placeholder="Añadir Imagen" onclick="document.getElementById('fileInput').click()" readonly>
        
     </div>
     <button id="botonCrearid" onclick="subirPublicacion()" class="botonCrear">Crear</button>

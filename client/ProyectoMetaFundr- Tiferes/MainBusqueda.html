@@ -16,22 +16,26 @@
             <input class="SearchI" type="text" placeholder="Busca un Start Up o una empresa">
             <button><i class="fas fa-search Glass" id="search-button"  ></i></button>
             <div class="nav">
-                <div class="circle">
-                    <i class="fas fa-gear plus"></i>
-            </div>
+               
+           <a href="Publications.html">
             <div class="circle"  id="redirect-icon" >
                 <i class="fas fa-plus plus"   ></i>
             </div>
+        </a> 
+        <a href="headerUser.html">
             <div class="circle">
+            
                 <i class="fas fa-user"></i>
-            </div>  
+            </div>
+        </a>
+              
             
         </div>
       
     </div>
     <div class="menu">
         <span class="menu-item active">Personas y Empresas</span>
-        <span class="menu-item">Personas y Empresas</span>
+        <span class="menu-item inactive">Start ups</span>
     </div>
     
 
@@ -90,17 +94,7 @@
             </div>
         </div>
     </div>
-    <script>
-        // Manejador de eventos para redirigir al hacer clic
-        document.getElementById('redirect-icon').addEventListener('click', function() {
-            window.location.href = 'Publications.html';
-        });
 
-            // Manejador de eventos para redirigir al hacer clic en el icono Glass
-            document.getElementById('search-button').addEventListener('click', function() {
-            window.location.href = 'Main.html';
-        });
-    </script>
     
 </body>
 </html>
