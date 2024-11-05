@@ -51,7 +51,11 @@ CORS_ALLOW_CREDENTIALS = True
 
 REST_AUTH = {
    'USE_JWT': True,
-   'JWT_AUTH_HTTPONLY':False
+   'JWT_AUTH_HTTPONLY':False,
+   'USER_DETAILS_SERIALIZER': 'startups.serializers.MetaUserSerializer'
+}
+
+REST_AUTH_SERIALIZERS = {
 }
 
 MIDDLEWARE = [

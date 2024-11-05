@@ -22,7 +22,7 @@ function obtenerIdUsuario() {
     .then(data => {
         console.log('Datos del usuario:', data);
         // Cambia el acceso al campo correcto del ID
-        const userId = data.pk || data.user?.pk;
+        const userId = data.id || data.user?.id;
         if (userId) {
             console.log('ID del usuario:', userId);
             return { pk: userId }; // Devuelve el ID del usuario

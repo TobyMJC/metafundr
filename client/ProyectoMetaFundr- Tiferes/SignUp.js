@@ -37,10 +37,10 @@ async function RegistarUser() {
 
   let usuario = {
     username: document.getElementById("UsernameId").value,
-    first_name: "tobi4124214",
-    last_name: "majic414124",
+    first_name: document.getElementById("FirstNameId").value,
+    last_name: document.getElementById("LastNameId").value,
     email: document.getElementById("EmailId").value,
-    phone_number: "123",
+    phone_number: document.getElementById("PhoneNumber1").value + " " + document.getElementById("PhoneNumber2").value,
     date_of_birth: FechaNac,
     password: document.getElementById("PasswordId").value,
   };
@@ -54,12 +54,12 @@ async function RegistarUser() {
       body: JSON.stringify(usuario),
     });
 
-    if (!response.ok) {
-      throw new Error("Error en el registro");
-    }
-
     const data = await response.json();
     console.log("Usuario registrado:", data);
+
+    if (!data.access_token) {
+      throw new Error("Error en el registro");
+    }
 
     localStorage.setItem("access_token", data.access_token);
     console.log("Access token guardado:", data.access_token);

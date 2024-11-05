@@ -6,19 +6,21 @@
     <title>Detalles de la Publicación</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="Project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="container">
         <div class="left-panel">
-            <img id="Foto.project">
+           <div class="ShadowPanel"><img class="imagenFondo" src="Libros.png" id="Foto.project"> </div> 
             <i class="fas fa-arrow-left back-button" onclick="window.history.back()"></i>
             <h1 id="project-title">Título del Proyecto</h1>
         </div>
         <div class="right-panel">
             <div class="profile">
                 <img id="project-thumbnail" alt="Imagen del Proyecto" width="50" height="50">
-                <h2 id="project-author">Autor del Proyecto</h2>
-                <button id="profile-button" onclick="redirectToProfile()">Ver Perfil</button>
+                <h2 id="project-author" onclick="redirectToProfile()">Autor del Proyecto</h2>
+             
             </div>
             <div class="section">
                 <h3>Descripción</h3>
@@ -27,12 +29,15 @@
             <div class="comments">
                 <h3>Comentarios</h3>
                 <div id="comments-container">
-                    <!-- Comentarios generados dinámicamente irán aquí -->
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero accusantium perferendis placeat laborum vel perspiciatis consectetur eveniet, ut quisquam laudantium, numquam, velit veniam debitis magni eos quaerat dolorum officia maxime.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis ut sapiente nihil non cum totam ex deserunt eius sequi nostrum alias veniam officia, error iste. Tempora quidem dolorum ab sed.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam at dolore commodi quia esse illo dolor reprehenderit, quaerat perspiciatis expedita qui voluptate asperiores, ab magni illum ex praesentium quisquam saepe! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente aut temporibus molestias tempore at, officiis, quos quisquam dicta, laboriosam doloremque sint enim eligendi harum beatae perferendis inventore numquam consectetur modi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur ipsum corrupti minima reiciendis ullam sapiente repellat odit veniam ex, ipsam impedit asperiores repudiandae velit illo doloribus recusandae, deleniti qui maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ea veritatis quidem deleniti pariatur voluptatem, quisquam inventore aspernatur culpa est voluptatum accusantium! Adipisci cumque quos nostrum unde veritatis, excepturi aut. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, quibusdam natus deleniti reprehenderit molestiae similique dignissimos omnis illo. Necessitatibus quo dignissimos beatae, ratione quia distinctio ad nesciunt suscipit ipsa laudantium.</p>  <!-- Comentarios generados dinámicamente irán aquí -->
                 </div>
-                <div class="comment-box">
+                <div class="comment-box-container"> <div class="comment-box">
                     <input id="InputComent" type="text" placeholder="Hacer un comentario">
-                    <button id="botonenviar" onclick="PostComent()"><i class="fas fa-paper-plane"></i></button>
+                   
                 </div>
+             <button id="botonenviar" onclick="PostComent()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+               
                 
             </div>            
         </div>

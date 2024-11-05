@@ -117,7 +117,9 @@ h2 {
     position: relative;
     
 }
-
+.linker {
+    padding-top: 3px;
+}
 
 .project-overlay {
     position: absolute;

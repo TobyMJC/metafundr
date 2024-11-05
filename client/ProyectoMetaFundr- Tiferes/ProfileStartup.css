@@ -75,6 +75,7 @@ h1 {
     border: 1px  solid#000;
     cursor: pointer;
     margin-right: 15%;
+    display: none;
 }
 
 
@@ -129,8 +130,14 @@ h1 {
     text-align: center;
     height: 160px;
     position: relative;
-    
+    transition: transform 0.2s ease;
+    cursor: pointer;
 }
+
+.project:hover{
+    transform: scale(1.1);
+}
+
 .project-overlay {
     position: absolute;
     width: 100%;
@@ -202,12 +209,15 @@ h1 {
 
 
 
-
+i{
+    cursor: pointer;
+}
 
 .ContactB {
 margin-left: 440px ;
 position: relative;
 top: -40px;
+display: none;
 
 }
 

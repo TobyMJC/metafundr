@@ -6,8 +6,8 @@ from rest_framework.exceptions import NotAuthenticated, PermissionDenied
 class MetaUserSerializer(serializers.ModelSerializer): 
     class Meta:
         model = MetaUser
-        fields = ['username','password', 'email', 'first_name', 'last_name', 'phone_number', 'date_of_birth']
-        extra_kwargs = {'password': {'write_only': True}, 'phone_number': {'write_only': True}}
+        fields = ['id', 'username','password', 'email', 'first_name', 'last_name', 'phone_number', 'date_of_birth']
+        extra_kwargs = {'password': {'write_only': True}, 'email': {'write_only': True}}
 
     def create(self, validated_data):
         user = MetaUser.objects.create_user(
@@ -40,39 +40,3 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields= 'id', 'title', 'description', 'goal', 'income', 'thumbnail', 'author', 'comments'
-
-class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
-    
-    def perform_create(self, serializer):
-        if self.request.user.is_authenticated:
-            serializer.save(author=self.request.user)
-        else:
-            raise NotAuthenticated("You are not authenticated")
-
-class PostCommentViewSet(viewsets.ModelViewSet):
-    queryset = PostComment.objects.all()
-    serializer_class = PostCommentSerializer
-    
-    def perform_create(self, serializer):
-        if self.request.user.is_authenticated:
-            serializer.save(author=self.request.user)
-        else:
-            raise NotAuthenticated("You are not authenticated")
-
-
-    def update(self, request, *args, **kwargs):
-        if not request.user.is_authenticated:
-            raise NotAuthenticated("You are not authenticated")
-
-        instance = self.get_object()
-
-        if request.user != instance.post.author:
-            raise PermissionDenied("You are not the author of the post")
-
-        serializer = self.serializer_class(instance, data=request.data, partial = True)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        return Response("OK", status=status.HTTP_200_OK)
-
