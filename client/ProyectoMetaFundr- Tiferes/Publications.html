@@ -28,12 +28,12 @@
        <img src="damero.png" alt="" class="img">
     </div>
     <div class="tags-image-container">
-        <input id="etiquetaId" class="Aobj" type="text" placeholder="Añadir Etiquetas">
-        <input id="imagenId" class="Aobja" type="text" placeholder="Añadir Imagen">
+        <input id="etiquetaId" class="Aobj" type="text" placeholder="Añadir Imagen" onclick="document.getElementById('fileInput').click()">
+       
     </div>
     <button id="botonCrearid" onclick="subirPublicacion()" class="botonCrear">Crear</button>
 </div>
-<input id="fileInput" type="file">
+<input id="fileInput" type="file" hidden>
 
 </main>
 <script src='Publications.js'></script> 

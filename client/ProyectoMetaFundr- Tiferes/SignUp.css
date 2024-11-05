@@ -44,6 +44,9 @@ body {
     background-color: #e29531; /* Color amarillo claro */
     font-size: 16px;
 }
+button:hover{
+    outline: 1px solid #3f2910;
+}
 .back-button {
     background: none;
     border: none;

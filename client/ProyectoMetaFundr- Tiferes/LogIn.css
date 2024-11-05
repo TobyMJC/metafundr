@@ -15,6 +15,7 @@ body {
     border-radius: 10px; /* El borde sigue redondeado */
     text-align: center;
     position: relative;
+    width: 35%;
 }
 
 .logo img {
@@ -26,13 +27,15 @@ body {
 .login-form input {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #000; /* Borde negro de 2px */
+    margin: 20px 0;
+    border: 2px solid #000000; /* Borde negro de 2px */
     border-radius: 15px; /* Menos redondeado */
     font-size: 16px;
     text-align: center; /* Centra el placeholder */
 }
-
+.login-form input:hover{
+outline: 1px solid rgb(63, 33, 4) ;
+}
 .login-form input::placeholder {
     text-align: center; /* Centra el texto del placeholder */
 }
@@ -52,7 +55,7 @@ body {
 }
 .login-form .login-btn,
 .login-form .register-btn {
-    width: 100%;
+    
     padding: 10px;
     margin: 10px 0;
     
@@ -67,11 +70,15 @@ body {
     position: relative;
     left: 10px;
 }
+button:hover {
+    outline: 1px solid rgb(63, 33, 4) ;
+
+}
 .login-form .login-btn {
     font-size: 18px; /* Aumenta un poco el tamaño de la fuente */
     border: 0,5px solid #000;    
     background-color: #f7b069;  
-    width: 80%;
+    width: 61%;
     color: #000;
 }
 
