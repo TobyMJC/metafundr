@@ -3,30 +3,29 @@ const projectId = urlParams.get("id");
 const userId = localStorage.getItem("user_id");
 let authormail;
 let usermail;
-const isLoggedIn = localStorage.getItem('access_token') !== null;
+const isLoggedIn = localStorage.getItem("access_token") !== null;
 
 function redirectToProfile() {
-  window.location.href = 'ProfileStartup.html';
+  window.location.href = "ProfileStartup.html";
 }
 
 function redirectToMain() {
-  window.location.href = 'Main.html';
+  window.location.href = "Main.html";
 }
 
 fetch(`http://localhost:8000/dj-rest-auth/user/`, {
   method: "GET",
   headers: {
     Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-    "Content-Type": "application/json"
-  }
+    "Content-Type": "application/json",
+  },
 })
   .then((response) => response.json())
   .then((user) => {
     usermail = user.email;
-    console.log(usermail); 
+    console.log(usermail);
   })
   .catch((error) => console.error("Error:", error));
-
 
 fetch(`http://localhost:8000/api/posts/${projectId}`)
   .then((response) => response.json())
@@ -38,16 +37,24 @@ fetch(`http://localhost:8000/api/posts/${projectId}`)
     document.getElementById("project-author").textContent =
       publicacion.author.username;
     document.getElementById("project-thumbnail").src = publicacion.thumbnail;
-    document.querySelector(".left-panel").style.backgroundImage = `url(${publicacion.thumbnail})`;
+    document.querySelector(
+      ".left-panel"
+    ).style.backgroundImage = `url(${publicacion.thumbnail})`;
 
     if (usermail === authormail) {
       const deleteButton = document.createElement("button");
-      deleteButton.textContent = "Borrar Publicación";
+      deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
       deleteButton.id = "Delete-button";
-      deleteButton.onclick = deletePost; // Asocia la función deletePost
+      deleteButton.onclick = deletePost;
+
+      const deleteButton2 = document.createElement("button");
+      deleteButton2.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+      deleteButton2.id = "Delete-button2";
+      deleteButton2.onclick = deletePost; // Asocia la función deletePost
 
       // Agrega el botón a la sección de perfil
-      const profileDiv = document.querySelector('.profile');
+      const profileDiv = document.querySelector(".profile");
+      profileDiv.appendChild(deleteButton2);
       profileDiv.appendChild(deleteButton);
     }
   })
@@ -55,24 +62,24 @@ fetch(`http://localhost:8000/api/posts/${projectId}`)
     console.error("Error al cargar los detalles de la publicación:", error);
   });
 
-  function deletePost() {
-    fetch(`http://localhost:8000/api/posts/${projectId}/`, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-      },
+function deletePost() {
+  fetch(`http://localhost:8000/api/posts/${projectId}/`, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("access_token")}`,
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      }
+      redirectToMain();
     })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Error ${response.status}: ${response.statusText}`);
-        }
-        redirectToMain();
-      })
-      .catch((error) => {
-        console.error("Error al eliminar la publicación:", error);
-        alert("No se pudo eliminar la publicación.");
-      });
-  }
+    .catch((error) => {
+      console.error("Error al eliminar la publicación:", error);
+      alert("No se pudo eliminar la publicación.");
+    });
+}
 
 function PostComent() {
   const Contenido = document.getElementById("InputComent").value;
@@ -117,7 +124,7 @@ fetch(`http://localhost:8000/api/comments/`)
     comments = datos2;
     console.log("el mail de usuario", usermail);
     console.log("mail author", authormail);
-    console.log("id usuario", userId)
+    console.log("id usuario", userId);
 
     const commentsContainer = document.getElementById("comments-container");
 
@@ -137,15 +144,16 @@ fetch(`http://localhost:8000/api/comments/`)
         comment.appendChild(newres);
         if (!comentario.answer && usermail == authormail && isLoggedIn) {
           const inputRespuesta = document.createElement("input");
+          inputRespuesta.placeholder = "Escribe tu respuesta aquí";
           const button = document.createElement("button");
           button.textContent = "Responder";
-          button.id = "botonenviar";
+          button.id = "botonenviar2";
 
           inputRespuesta.id = "InputRespuesta";
           button.classList.add("responder-boton");
-
-          comment.appendChild(button);
           comment.appendChild(inputRespuesta);
+          comment.appendChild(button);
+
           button.addEventListener("click", () => {
             inputRespuesta.placeholder = "Respondiendo a " + newP.textContent;
             const respuesta = inputRespuesta.value;
@@ -180,5 +188,3 @@ fetch(`http://localhost:8000/api/comments/`)
   .catch((error) => {
     console.error("Error al cargar los comentarios:", error);
   });
-
-
