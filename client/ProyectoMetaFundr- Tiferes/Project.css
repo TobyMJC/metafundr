@@ -160,7 +160,18 @@ body {
     align-items: center;
     justify-content: space-evenly;
     bottom: 0;
+    top: 0;
     background-color: white;
+}
+.comentario {
+    color: grey !important;
+}
+.respuesta {
+    display: flex;
+}
+.respuesta i {
+    font-size: 35px;
+    margin-right: 10px;
 }
 
 .comment-box {
@@ -219,6 +230,10 @@ h2:hover{
 }
 h2,#project-thumbnail,.back-button {
     transition: transform 0.2s ease;
+}
+
+#project-description {
+    color: grey !important;
 }
 
 
