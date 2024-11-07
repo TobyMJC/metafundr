@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Foto</title>
+    <link rel="stylesheet" href="UploadImage.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sección izquierda -->
+        <div class="left">
+            <div class="image-preview im1">
+                <span class="title">Foto actual:</span>
+                <img src="https://via.placeholder.com/50" alt="Foto actual">
+                <span class="close-icon">×</span>
+            </div>
+            <div class="image-preview">
+                <span class="title">Vista previa:</span>
+                <img src="https://via.placeholder.com/50" alt="Vista previa">
+            </div>
+        </div>
+        
+        <!-- Sección derecha -->
+        <div class="right">
+            <div class="upload-section">
+                <label for="upload" class="upload-icon">📷</label>
+                <input type="file" id="upload" accept="image/*">
+                <button class="upload-button">Subir Imagen</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
