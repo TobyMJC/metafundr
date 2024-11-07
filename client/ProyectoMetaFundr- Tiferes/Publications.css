@@ -7,7 +7,7 @@
 }
 body{
     background: linear-gradient(180deg, #ebad67 ,#633b0e);
-    
+    font-family: 'Inter';
 }
 
 .circle {
@@ -74,6 +74,10 @@ body {
     cursor: pointer;
     position: relative;
     top: -40px;
+    background-color: #b37c51;
+}
+.Aobj::placeholder {
+color: black;
 }
 .Aobj,.Nombre1{
     width: 500px;
