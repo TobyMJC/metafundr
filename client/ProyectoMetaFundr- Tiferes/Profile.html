@@ -39,13 +39,13 @@
      <i class="fas fa-arrow-left flecha"onclick="window.history.back()"></i>
         <div class="header">
             <img src="Cohete.png" alt="Lionel Messi" class="profile-pic">
-            <h1>Lionel Andres Messi</h1>
+            <h1 id="NombrePerfil" >Lionel Andres Messi</h1>
             <button class="follow-btn">Seguir</button>
         </div>
         <div class="profile-info">
             <div class="tab-menu">
                 <span class="active">Perfil</span>
-                <a href="ProfileStartup.html" class="linker">  <span>Starts Ups</span> </a>
+                <a onclick="RedirectToPS()"class="linker">  <span>Starts Ups</span> </a>
             </div>
             <div class="info-grid">
 
@@ -58,7 +58,7 @@
                        <i class="fas fa-arrow-left arrowback Back " ></i>  
 
                       </div>
-                      Se unió: 12/08/24
+                      <p id="Nombre"></p>
                     </div>
 
                     <div class="info-item"><strong>
@@ -66,28 +66,28 @@
                         <div class="circle"> 
                         <i class="fas fa-arrow-left arrowback Back"></i>  
                        </div> 
-                       DNI: 33.016.244 </strong> </div>
+                       <p id="Apellido" ></p> </strong> </div>
                 </div>
               <div class="BLine">   
                 <div class="info-item"><strong>
                     <div class="circle"> 
                         <i class="fas fa-arrow-left arrowback Back"></i>  
                        </div> 
-                    Nacionalidad: Argentina</strong></div>
+                    <p id="NumeroTel" ></p></strong></div>
 
                 <div class="info-item"><strong>
                     <div class="circle"> 
                         <i class="fas fa-arrow-left arrowback Back"></i>  
                        </div> 
-                    Cuenta: Personal</strong></div>
+                    <p id="Mail" ></p></strong></div>
               </div>
 
                <div class="LastPart">
                 <div class="info-item"><strong>
                     <div class="circle"> 
                         <i class="fas fa-arrow-left arrowback Back"></i>  
-                       </div> 
-                    Fecha de Nacimiento: 24/06/87</strong>
+                       </div   > 
+                    <p id="FechaNac" >Fecha de Nacimiento: 24/06/87</p></strong>
                 </div>
                 
                </div>
@@ -98,5 +98,6 @@
           
         </div>
     </div>
+    <script src="Profile.js"></script>
 </body>
 </html>
