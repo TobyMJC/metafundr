@@ -39,13 +39,13 @@
          <i class="fas fa-arrow-left flecha"  onclick="window.history.back()" ></i>
         <div class="header">
             <img src="Cohete.png" alt="Lionel Messi" class="profile-pic">
-            <h1>Lionel Andres Messi</h1>
+            <h1 id="NombreAutor" >Lionel Andres Messi</h1>
             <button class="follow-btn">Seguir</button>
          
         </div>
         <div class="profile-info">
             <div class="tab-menu">
-               <a href="Profile.html" class="linker"> <span >Perfil</span></a>
+               <a onclick="RedirectToProfile()" class="linker"> <span >Perfil</span></a>
                 <span class="active" >Starts Ups</span>
             </div>
             <div class="info-grid">
@@ -56,34 +56,6 @@
                         <p>APP DE GESTIÓN DE TAREAS</p>
                         <!--CAMBIAR POR LABEL QUE MUESTRE EL TITULO DE LA START-UP-->
                     </div>
-                    <div class="project">
-                        <div class="project-overlay"></div>
-                        <img src="mario.png" alt="Juego 2D">
-                        <p>JUEGO 2D</p> <!--CAMBIAR POR LABEL QUE MUESTRE EL TITULO DE LA START-UP-->
-                    </div>
-                    <div class="project">
-                        <div class="project-overlay"></div>
-                        <img src="Netflix.png" alt="Sistema de Recomendación de Películas">
-                        <p>SISTEMA DE RECOMENDACIÓN DE PELÍCULAS</p> <!--CAMBIAR POR LABEL QUE MUESTRE EL TITULO DE LA START-UP-->
-                    </div>
-                    <div class="project">
-                        <div class="project-overlay"></div>
-                        <img src="Cohete.png" alt="Cohete">
-                        <p>COHETE</p>
-                    </div>
-                    <div class="project">
-                        <div class="project-overlay"></div>
-                        <img src="Libros.png" alt="App de Gestión de Tareas">
-                        <p>APP DE GESTIÓN DE TAREAS</p> <!--CAMBIAR POR LABEL QUE MUESTRE EL TITULO DE LA START-UP-->
-                    </div>
-                    <div class="project">   
-                        <div class="project-overlay"></div>
-                        <img src="Libros.png" alt="App de Gestión de Tareas">
-                        <p>APP DE GESTIÓN DE TAREAS</p>
-                        <!--CAMBIAR POR LABEL QUE MUESTRE EL TITULO DE LA START-UP-->
-                    </div>
-                    
-                    
                 </div>
 
 
@@ -98,5 +70,6 @@
           
         </div>
     </div>
+    <script src="ProfileStartup.js"></script>
 </body>
 </html>
