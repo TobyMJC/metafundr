@@ -4,9 +4,10 @@ from rest_framework import serializers, viewsets, status
 from rest_framework.exceptions import NotAuthenticated, PermissionDenied
 
 class MetaUserSerializer(serializers.ModelSerializer): 
+    image = serializers.ImageField(required = False)
     class Meta:
         model = MetaUser
-        fields = ['id', 'username','password', 'email', 'first_name', 'last_name', 'phone_number', 'date_of_birth']
+        fields = ['id', 'image', 'username','password', 'email', 'first_name', 'last_name', 'phone_number', 'date_of_birth']
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):

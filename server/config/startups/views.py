@@ -40,6 +40,22 @@ class RegisterView(generics.GenericAPIView):
 class MetaUserViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = MetaUser.objects.all()
     serializer_class = MetaUserSerializer
+    
+    def update(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            raise NotAuthenticated("You are not authenticated")
+
+        instance = self.get_object()
+
+        if request.user != instance:
+            raise PermissionDenied("No permission")
+            
+        data = {'image': request.data.get('image')}
+
+        serializer = self.serializer_class(instance, data=data, partial = True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response("OK", status=status.HTTP_200_OK)
 
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
@@ -59,7 +75,6 @@ class PostViewSet(viewsets.ModelViewSet):
                 return Response("OK", status=status.HTTP_200_OK)
             else:
                 raise PermissionDenied("You are not the author of the post")
-                return Response("OK", status=status.HTTP_403_FORBIDDEN)
         else:
             raise NotAuthenticated("You are not authenticated")
     
@@ -82,7 +97,6 @@ class PostCommentViewSet(viewsets.ModelViewSet):
 
         if request.user != instance.post.author:
             raise PermissionDenied("You are not the author of the post")
-            return Response("OK", status=status.HTTP_403_FORBIDDEN)
 
         serializer = self.serializer_class(instance, data=request.data, partial = True)
         serializer.is_valid(raise_exception=True)
