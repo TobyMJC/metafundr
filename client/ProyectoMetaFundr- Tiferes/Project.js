@@ -5,6 +5,8 @@ let userid;
 let authorid2;
 const isLoggedIn = localStorage.getItem("access_token") !== null;
 
+
+
 function redirectToProfile() {
   fetch(`http://localhost:8000/api/posts/${projectId}`)
     .then((response) => response.json())
@@ -200,3 +202,4 @@ fetch(`http://localhost:8000/api/comments/`)
   .catch((error) => {
     console.error("Error al cargar los comentarios:", error);
   });
+

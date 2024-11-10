@@ -11,6 +11,8 @@ fetch(`http://localhost:8000/api/users/${authorid}`)
   .then((datos2) => {
     user = datos2;
     console.log(user);
+    const profileImage = document.getElementById("profileImage");
+    profileImage.src = user.image;
     document.getElementById("NombrePerfil").textContent = user.username;
     document.getElementById("FechaNac").textContent =
       "Fecha de nacimineto: " + user.date_of_birth;
