@@ -43,6 +43,8 @@ fetch(`http://localhost:8000/api/users/${authorid}`)
     user = datos2;
     console.log(user);
     document.getElementById("NombreAutor").textContent = user.username;
+    const profileImage = document.getElementById("profileImage");
+    profileImage.src = user.image;
   })
   .catch((error) => {
     console.error("Error al obtener las publicaciones:", error);

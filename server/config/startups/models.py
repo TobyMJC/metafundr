@@ -13,7 +13,7 @@ def default_date_of_birth():
     return timezone.now().date() - timedelta(days=18*365)
 
 class MetaUser(AbstractUser, PermissionsMixin):
-    
+    image = models.ImageField(default="user.png", upload_to="user_images/")
     username = models.CharField(max_length=255, unique=True)
     email = models.EmailField(unique=True, default="placeholder@example.com")
 
