@@ -24,15 +24,17 @@ body {
     font-size: 14px;
     margin-left: 4.5%;
     
-    margin-top:15px ;
+    margin-top:25px ;
 }
 .flecha{
     font-size: 45px;
      position: relative;
      left: 1135px;
-     margin-top: 5px;
+     
 }
-
+.LogoN {
+    width: 60%;
+}
 .header {
     display: flex;
     align-items: center;
@@ -89,12 +91,15 @@ i{
     font-weight: bold;
 }
 
+
 .tab-menu .active {
     font-weight: bold;
     border-bottom: 2px solid #333;
     width: 160px;
     text-align: center;
+    
 }
+
 
 .info-grid {
     margin-bottom: 20px;
@@ -264,6 +269,7 @@ input:focus {
     justify-content: space-between; 
     padding: 10px;
     padding: 0px 300px; 
+    display: none;
 }
 
 .menu-item {
@@ -280,6 +286,9 @@ input:focus {
 }
 .linker {
     text-decoration: none;
-    
+    transition: 1s;
     color: black;
+}
+.linker:hover{ 
+border-bottom: 1px solid black;
 }

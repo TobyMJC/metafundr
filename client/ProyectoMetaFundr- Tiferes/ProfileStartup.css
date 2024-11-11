@@ -6,8 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    
-    background: linear-gradient(180deg, #96652e ,#3f2910);
+    background: linear-gradient(180deg, #ebad67 ,#633b0e);
     justify-content: center;
     align-items: center;
     height: fit-content;
@@ -18,11 +17,11 @@ body {
     border-radius: 20px;
     padding-top: 10px;
     padding-bottom:110px ;
-    width: 90%;
+    width: 1281px;
     height: fit-content;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     font-size: 14px;
-    margin-left: 4.5%;
+    margin-left:2% ;
     scale: .95;
     
 }
@@ -42,8 +41,8 @@ a {
 .flecha{
     font-size: 45px;
      position: relative;
-     left: 1156px;
-     margin-top: 5px;
+     left: 1220px;
+     margin-top: 10px;
 }
 .profile-pic {
     border-radius: 50%;
@@ -117,7 +116,7 @@ h1 {
     scale: 0.7;
     width: 800px;
     position: relative;
-    left: -145px;
+    left: -135px;
 }
 
 
@@ -312,6 +311,7 @@ input:focus {
     justify-content: space-between; 
     padding: 10px;
     padding: 0px 300px; 
+    display: none;
 }
 
 .menu-item {
