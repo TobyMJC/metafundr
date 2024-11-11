@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Inter, sans-serif;
     background: linear-gradient(180deg, #ebad67 ,#633b0e);
     height: 100vh;/* Color similar al fondo de la primera imagen */
     font-weight: bold;
@@ -69,7 +69,7 @@ a {
     width: 100%;
     align-items: center;
     padding: 10px 20px;
-    
+    display: none;
 }
 .active {
     border-bottom: 2px solid #000;
@@ -81,9 +81,10 @@ a {
     font-size: 18px;
     position: relative;
 }
+/*
 #Nombre,#apellido,#Mail,#pais-residencia {
-    background-color: white !important;
-}
+    background-color: white 
+}*/
 .container {
     background-color: #FFFFE0;
     border: 2px solid #A07855;
@@ -123,6 +124,7 @@ h4 {
     padding: 10px;
     cursor: pointer;
     margin-bottom: 10px;
+    transition: 0.2s;
 }
 
 .container button:hover, .container input:hover {
@@ -180,23 +182,3 @@ h4 {
     background-color: #C78C5B;
 }
 
-/* Asegurar que todo se escale bien en pantallas pequeñas */
-@media (max-width: 768px) {
-    .info-group {
-        flex-direction: column;
-    }
-
-    .info-group div {
-        width: 100%;
-    }
-
-    .input-group {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .user-input, .button-right {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}

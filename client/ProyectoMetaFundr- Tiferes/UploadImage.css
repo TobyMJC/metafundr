@@ -28,6 +28,11 @@ body {
     position: relative;
     left: -155px;
     top: -35px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.back-button:hover{
+    scale: 1.1;
 }
 
 .left, .right {
