@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background: linear-gradient(180deg, #704c23 ,#3f2910);
 }
 
@@ -179,6 +179,7 @@ input::placeholder {
 .SignUp-div {
     overflow-y: scroll;
     height: 400px;
+    padding-bottom: 10px;
 }
 
 .SignUp-div::-webkit-scrollbar {
