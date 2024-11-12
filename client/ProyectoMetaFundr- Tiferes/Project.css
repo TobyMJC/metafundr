@@ -5,7 +5,7 @@ body {
     height: 100vh;
     background-color: #745018;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(180deg, #b36c1b ,#3f2910);
+    background: linear-gradient(180deg, #be7a2b ,#3f2910);
 }
 
 
@@ -17,7 +17,10 @@ body {
     border: 2px solid black;
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.7);
 }
-
+.Lrespuesta{
+    width: 30px;
+    
+}
 .left-panel {
     width: 50%;
     background-size: cover;
