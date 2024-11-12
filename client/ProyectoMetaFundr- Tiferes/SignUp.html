@@ -34,8 +34,10 @@
                 </div>
                 <input id="PasswordId" type="password" placeholder="Password" required>
                 <input type="password" placeholder="Confirm Password" required>
-               <a href="Main.html"> <button onclick="RegistarUser()" id="LogInBtn">Register</button></a>
+                <button id="AddImageid" class="Aobj" type="text" onclick="document.getElementById('fileInput').click()"  readonly>Añadir imagen</button>
+                <input id="fileInput" type="file" hidden >
             </div>
+            <a href="Main.html"> <button onclick="RegistarUser()" id="LogInBtn">Register</button></a>
         </div>
     </div>
     <script src="SignUp.js"></script>
