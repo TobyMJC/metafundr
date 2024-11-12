@@ -7,7 +7,7 @@ class MetaUserSerializer(serializers.ModelSerializer):
     image = serializers.ImageField(required = False)
     class Meta:
         model = MetaUser
-        fields = ['id', 'image', 'username','password', 'email', 'first_name', 'last_name', 'phone_number', 'date_of_birth']
+        fields = ['id', 'image', 'username','password', 'email', 'first_name', 'last_name', 'phone_number', 'date_of_birth', 'date_joined']
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
