@@ -11,12 +11,24 @@ fetch("http://127.0.0.1:8000/api/posts/")
     console.log(err);
   });
 
+  document.getElementById("fileInput").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById("Pre").src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
 function subirPublicacion() {
   console.log(localStorage.getItem("access_token"));
   const nombre = document.getElementById("nombreId").value;
   const descripcion = document.getElementById("descripcionId").value;
   const fileInput = document.getElementById("fileInput");
   const file = fileInput.files[0];
+  
   console.log(nombre + descripcion);
   console.log(userId);
 
@@ -44,8 +56,7 @@ function subirPublicacion() {
       document.getElementById("nombreId").value = "";
       document.getElementById("descripcionId").value = "";
       document.getElementById("etiquetaId").value = "";
-      document.getElementById("imagenId").value = "";
-      fileInput.value = "";
+      document.getElementById("Pre").src = "imagenVacia.png";
     })
     .catch((err) => {
       console.log(err);

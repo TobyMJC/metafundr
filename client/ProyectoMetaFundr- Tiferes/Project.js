@@ -43,7 +43,7 @@ fetch(`http://localhost:8000/api/posts/${projectId}`)
       publicacion.description;
     document.getElementById("project-author").textContent =
       publicacion.author.username;
-    document.getElementById("project-thumbnail").src = publicacion.thumbnail;
+    document.getElementById("project-thumbnail").src = publicacion.author.image;
     document.querySelector(
       ".left-panel"
     ).style.backgroundImage = `url(${publicacion.thumbnail})`;
