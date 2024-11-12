@@ -18,7 +18,9 @@ body {
     box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.7);
 }
 .Lrespuesta{
-    width: 30px;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
     
 }
 .left-panel {
@@ -136,15 +138,23 @@ body {
 
 .comments {
     margin-top: 20px;
+    
 }
 
 .comment {
     color: #745018;
+    
 }
 .comentario {
     color: black !important;
-    
+
 }
+
+.cajares1 {
+    display: flex;
+
+}
+
 
 .comments h3 {
     margin: 0;
