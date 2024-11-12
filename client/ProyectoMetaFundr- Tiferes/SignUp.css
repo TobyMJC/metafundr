@@ -62,7 +62,9 @@ button:hover{
     font-size: 36px;
     margin-bottom: 20px;
     font-weight: bold;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7); 
+    width:108.4%;
+    margin-left: -19px;
 }
 
 .SignUp-form input {
@@ -152,10 +154,6 @@ input::placeholder {
     position: relative;
     top: 4px;
 }
-
-
-
-
 .spacer{
     width: 30px;
     background-color: red;
@@ -168,9 +166,20 @@ input::placeholder {
     margin: 4px 5px;
     border: 1px solid BLACK;
     border-radius: 20px;
-    background-color: #ffed9f; /* Color amarillo claro */
+    background-color: #ffed9f; 
     font-size: 16px;
-    
     cursor: pointer;
 }
 
+.SignUp-div {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.SignUp-div::-webkit-scrollbar {
+    width: 0; 
+}
+
+.form-bottom {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);  
+}
