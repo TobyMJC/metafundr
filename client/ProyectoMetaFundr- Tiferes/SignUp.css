@@ -28,10 +28,10 @@ body {
 .form-box input {
     width: 80%;
     padding: 10px;
-    margin: 4px 5px;
+    margin: 8px 5px;
     border: 1px solid BLACK;
     border-radius: 20px;
-    background-color: #ffed9f; /* Color amarillo claro */
+    background-color: #FFFDD0; /* Color amarillo claro */
     font-size: 16px;
 }
 
@@ -41,8 +41,9 @@ body {
     margin: 4px 5px;
     border: 1px solid BLACK;
     border-radius: 20px;
-    background-color: #e29531; /* Color amarillo claro */
+    background-color: #E4B376; /* Color amarillo claro */
     font-size: 16px;
+    color:#444;
 }
 button:hover{
     outline: 1px solid #3f2910;
@@ -55,14 +56,18 @@ button:hover{
     top: 25px;
     left: 10px;
     cursor: pointer;
-
+    transition: 0.2s;
+}
+.back-button:hover {
+    outline: none;
+    scale: 1.1;
 }
 
 .logo {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
     font-weight: bold;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7); 
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4); 
     width:108.4%;
     margin-left: -19px;
 }
@@ -74,7 +79,7 @@ button:hover{
     margin-bottom: 15px;
     border: none;
     border-radius: 5px;
-    background-color: #ffed9f;
+    background-color: #FFFDD0 ;
     font-size: 16px;
     box-sizing: border-box;
     border: 1px solid black;
@@ -115,8 +120,8 @@ button:hover{
 
 .DB {
    display: flex;
-   margin-bottom:5px;
-   margin-top: 10px;
+   margin-bottom:-4px;
+   margin-top: 7px;
    color: #666;
    margin-left: 38px;
 
@@ -146,13 +151,13 @@ input::placeholder {
     padding: 0px 20px;
     border: 1px solid black;
     border-radius: 20px;
-    background-color: #ffed9f; /* Color amarillo claro */
+    background-color: #FFFDD0; /* Color amarillo claro */
     font-size: 16px;
     height: 40px;
     width: 120px;
     text-align: center;
     position: relative;
-    top: 4px;
+    top: 8px;
 }
 .spacer{
     width: 30px;
@@ -160,13 +165,13 @@ input::placeholder {
 }
 
 #AddImageid {
-    
-    width: 80%;
+    color:#444;
+    width: 85%;
     padding: 10px;
     margin: 4px 5px;
     border: 1px solid BLACK;
     border-radius: 20px;
-    background-color: #ffed9f; 
+    background-color: #E4B376; 
     font-size: 16px;
     cursor: pointer;
 }
@@ -181,5 +186,9 @@ input::placeholder {
 }
 
 .form-bottom {
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);  
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.3); 
+    width: 108.3%;
+    margin-left: -18px;
+    margin-top: 4px;
+    
 }
