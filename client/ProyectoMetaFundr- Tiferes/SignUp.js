@@ -7,7 +7,7 @@ async function obtenerIdUsuario() {
   }
 
   try {
-    const response = await fetch(" ", {
+    const response = await fetch("http://localhost:8000/dj-rest-auth/user/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,10 @@ async function RegistarUser() {
     first_name: document.getElementById("FirstNameId").value,
     last_name: document.getElementById("LastNameId").value,
     email: document.getElementById("EmailId").value,
-    phone_number: document.getElementById("PhoneNumber1").value + " " + document.getElementById("PhoneNumber2").value,
+    phone_number:
+      document.getElementById("PhoneNumber1").value +
+      " " +
+      document.getElementById("PhoneNumber2").value,
     date_of_birth: FechaNac,
     password: document.getElementById("PasswordId").value,
   };
@@ -65,10 +68,10 @@ async function RegistarUser() {
     console.log("Access token guardado:", data.access_token);
 
     const userData = await obtenerIdUsuario();
-    userId = userData.pk;
+    userId = userData.id;
     localStorage.setItem("user_id", userId);
     console.log("ID del usuario:", userId);
-    window.location.href = "Publications.html";
+    window.location.href = "Main.html";
   } catch (error) {
     console.error("Error al registrar el usuario:", error);
   }
