@@ -44,10 +44,10 @@ body {
     background-color: #E4B376; /* Color amarillo claro */
     font-size: 16px;
     color:#444;
+    position: relative;
+    top: 10px;
 }
-button:hover{
-    outline: 1px solid #3f2910;
-}
+
 .back-button {
     background: none;
     border: none;
@@ -112,11 +112,6 @@ button:hover{
     border: 1px solid black;
 }
 
-.SignUp-form button:hover {
-    background-color: rgb(180, 112, 35);
-    transition: 0.3s;
-      
-}
 
 .DB {
    display: flex;
@@ -183,7 +178,7 @@ input::placeholder {
 }
 
 .SignUp-div::-webkit-scrollbar {
-    width: 0; 
+width: 0; 
 }
 
 .form-bottom {
@@ -193,3 +188,35 @@ input::placeholder {
     margin-top: 4px;
     
 }
+input {
+    transition: 0.2s;
+    text-align: center;
+}
+.country-code {
+    transition: 0.2s;
+}
+.country-code:hover {
+    background-color: #e7c464;
+
+}
+input:hover {
+ background-color: #e7c464;
+}
+button {
+    transition: 0.2s;
+}
+
+button:hover{
+    outline: 1px solid #3f2910;
+    background-color: #9c6f3b !important ;
+    color: black !important;
+}
+
+
+.back-button:hover {
+    outline: none !important;
+    background-color: white !important;
+
+}
+
+

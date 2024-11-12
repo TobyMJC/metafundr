@@ -32,9 +32,12 @@ body {
     border-radius: 15px; /* Menos redondeado */
     font-size: 16px;
     text-align: center; /* Centra el placeholder */
+    transition: 0.2s;
 }
 .login-form input:hover{
 outline: 1px solid rgb(63, 33, 4) ;
+box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+
 }
 .login-form input::placeholder {
     text-align: center; /* Centra el texto del placeholder */
@@ -70,8 +73,12 @@ outline: 1px solid rgb(63, 33, 4) ;
     position: relative;
     left: 10px;
 }
+button {
+    transition: 0.2s;
+}
 button:hover {
     outline: 1px solid rgb(63, 33, 4) ;
+    scale: 1.05;
 
 }
 .login-form .login-btn {
@@ -100,4 +107,19 @@ button:hover {
 
 .flag img {
     width: 30px;
+    
+}
+
+.ImagenLogo {
+    animation: sombraIntermitente 1s infinite;
+}
+
+@keyframes sombraIntermitente {
+    0%, 100% {
+        
+    }
+    50% {
+        
+        scale: 1.1;
+    }
 }
