@@ -5,8 +5,6 @@ let userid;
 let authorid2;
 const isLoggedIn = localStorage.getItem("access_token") !== null;
 
-
-
 function redirectToProfile() {
   fetch(`http://localhost:8000/api/posts/${projectId}`)
     .then((response) => response.json())
@@ -140,15 +138,23 @@ fetch(`http://localhost:8000/api/comments/`)
         comments.forEach((comentario) => {
           if (comentario.post == projectId) {
             const comment = document.createElement("div");
+            const cajares = document.createElement("div");
             const newP = document.createElement("p");
+            const newi = document.createElement("img");
             const newres = document.createElement("p");
+            newi.classList.add("Lrespuesta");
+            newi.classList.add("comment");
             newres.classList.add("comment");
+            newi.src = "Lrespuesta.png";
             newres.textContent = comentario.answer;
             comment.classList.add("comment");
+            cajares.classList.add("cajares1");
             newP.classList.add("comentario");
             newP.textContent = comentario.content;
+            cajares.appendChild(newi);
+            cajares.appendChild(newres);
             comment.appendChild(newP);
-            comment.appendChild(newres);
+            comment.appendChild(cajares);
             if (!comentario.answer && userId == authorid && isLoggedIn) {
               const inputRespuesta = document.createElement("input");
               inputRespuesta.placeholder = "Escribe tu respuesta aquí";
@@ -202,4 +208,3 @@ fetch(`http://localhost:8000/api/comments/`)
   .catch((error) => {
     console.error("Error al cargar los comentarios:", error);
   });
-
