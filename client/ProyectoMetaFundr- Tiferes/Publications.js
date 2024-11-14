@@ -11,12 +11,15 @@ fetch("http://127.0.0.1:8000/api/posts/")
     console.log(err);
   });
 
-  document.getElementById("fileInput").addEventListener("change", function(event) {
+document
+  .getElementById("fileInput")
+  .addEventListener("change", function (event) {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
-      reader.onload = function(e) {
+      reader.onload = function (e) {
         document.getElementById("Pre").src = e.target.result;
+        document.getElementById("Pre").style.marginTop = "50px";
       };
       reader.readAsDataURL(file);
     }
@@ -27,8 +30,8 @@ function subirPublicacion() {
   const nombre = document.getElementById("nombreId").value;
   const descripcion = document.getElementById("descripcionId").value;
   const fileInput = document.getElementById("fileInput");
+
   const file = fileInput.files[0];
-  
   console.log(nombre + descripcion);
   console.log(userId);
 

@@ -52,19 +52,15 @@ body {
     text-align: center;
 }
 
- input {
-    
+ input { 
     width: 455px;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #333;
+    margin-bottom: 20px; 
     border-radius: 15px;
     font-size: 16px;
     transition: 0.2s;
 }
-input:hover{
-    outline: 1px solid rgb(63, 33, 4) ;
-}
+
 
 
 
@@ -79,7 +75,8 @@ input:hover{
     cursor: pointer;
     position: relative;
     top: -40px;
-    background-color: #915223 ;
+    
+    background-color: #b4703d;
     margin-left:35px ;
     width:530px !important;
     text-align: center;
@@ -90,8 +87,8 @@ color: black;
 }
 .plusInput{
     font-size: 25px;
-    position: relative;
-    left: -178px;
+    position: relative; 
+    right: 178px !important;
     
 }
 .Aobj,.Nombre1{
@@ -134,7 +131,7 @@ color: black;
 .botonCrear {
     left: -120px !important;
     top: -25px !important;
-    background-color: #b4703d ;
+    background-color: #915223 ;
 }
 input {
     text-align: center;
@@ -143,8 +140,20 @@ input {
 
 .form-container button:hover {
     background-color: #c88b5c;
+    
 }
-
+.Nombre1 {
+    transition: 0.2s !important;
+}
+.Nombre1:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3) !important;
+}
+.preview-box {
+    transition: 0.2s !important;
+}
+.preview-box:hover {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3) !important;
+}
 
 .Main{
     display: flex;
@@ -152,14 +161,19 @@ input {
     margin-top: 2.5%;
 }
 
-.img{
+.img-container{
     width:250px;
     height: 250px;
-    box-sizing: border-box;
     border-radius: 15px;
     position: relative;
     right: -64px;
     top: -30px;
+    
+}
+.img {
+    max-width: 100%;
+    max-height: 100%;
+
 }
 
 .preview-box {
@@ -183,19 +197,4 @@ input {
 a{
     color: inherit; /* O puedes especificar un color, por ejemplo, color: black; */
     text-decoration: none;
-}
-input{
-    transition: 0.2s;
-}
-input:hover {
-    background-color: #f6f7c6;
-    outline: 1px solid black;
-}
-
-input:focus{
-    outline: none;
-}
-
-.Aobj:hover {
-    background-color: #b37c51 !important;
 }
