@@ -8,6 +8,7 @@
 body{
     background: linear-gradient(180deg, #ebad67 ,#633b0e);
     font-family: 'Inter';
+    height: 110vh;
 }
 
 .circle {
@@ -59,6 +60,10 @@ body {
     border: 2px solid #333;
     border-radius: 15px;
     font-size: 16px;
+    transition: 0.2s;
+}
+input:hover{
+    outline: 1px solid rgb(63, 33, 4) ;
 }
 
 
@@ -74,10 +79,20 @@ body {
     cursor: pointer;
     position: relative;
     top: -40px;
-    background-color: #b37c51;
+    background-color: #915223 ;
+    margin-left:35px ;
+    width:530px !important;
+    text-align: center;
+    border-radius: 20px !important;
 }
 .Aobj::placeholder {
 color: black;
+}
+.plusInput{
+    font-size: 25px;
+    position: relative;
+    left: -178px;
+    
 }
 .Aobj,.Nombre1{
     width: 500px;
@@ -102,17 +117,24 @@ color: black;
 }
 
 .form-container button {
-    padding: 10px 20px;
-    background-color: #e0a670;
+    padding: 0px 20px;
+    
     border: 1px solid black;
-    border-radius: 15px;
+    border-radius: 17px !important;
     font-size: 18px;
     cursor: pointer;
     width: 140px;
     transition: background-color 0.3s;
     position: relative;
     left: -38px;
+    top: -40px;
+    height: 45px;
     
+}
+.botonCrear {
+    left: -120px !important;
+    top: -25px !important;
+    background-color: #b4703d ;
 }
 input {
     text-align: center;
@@ -131,8 +153,9 @@ input {
 }
 
 .img{
-    width: 30%;
-    height: 36%;
+    width:250px;
+    height: 250px;
+    box-sizing: border-box;
     border-radius: 15px;
     position: relative;
     right: -64px;
