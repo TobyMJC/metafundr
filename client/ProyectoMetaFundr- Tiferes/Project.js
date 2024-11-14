@@ -35,7 +35,9 @@ fetch(`http://localhost:8000/dj-rest-auth/user/`, {
 fetch(`http://localhost:8000/api/posts/${projectId}`)
   .then((response) => response.json())
   .then((publicacion) => {
-    var authorid = publicacion.author.id;
+    let authoridd = publicacion.author.id;
+    console.log("acaaaaa" + userId);
+
     document.getElementById("project-title").textContent = publicacion.title;
     document.getElementById("project-description").textContent =
       publicacion.description;
@@ -46,21 +48,17 @@ fetch(`http://localhost:8000/api/posts/${projectId}`)
       ".left-panel"
     ).style.backgroundImage = `url(${publicacion.thumbnail})`;
 
-    if (userid == authorid) {
+    if (userId == authoridd) {
+      console.log("holaaaaaa");
       const deleteButton = document.createElement("button");
-      deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
       deleteButton.id = "Delete-button";
       deleteButton.onclick = deletePost;
+      deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
 
-      const editButton = document.createElement("button");
-      editButton.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
-      editButton.id = "Delete-button2";
-
-      // Agrega el botón a la sección de perfil
-      const profileDiv = document.getElementById("profile-div");
-      profileDiv.appendChild(editButton);
+      const profileDiv = document.getElementById("Perfil");
       profileDiv.appendChild(deleteButton);
-      console.log(profileDiv);
+    } else {
+      console.log("chauuuu");
     }
   })
   .catch((error) => {
@@ -140,21 +138,31 @@ fetch(`http://localhost:8000/api/comments/`)
             const comment = document.createElement("div");
             const cajares = document.createElement("div");
             const newP = document.createElement("p");
-            const newi = document.createElement("img");
-            const newres = document.createElement("p");
-            newi.classList.add("Lrespuesta");
-            newi.classList.add("comment");
-            newres.classList.add("comment");
-            newi.src = "Lrespuesta.png";
-            newres.textContent = comentario.answer;
-            comment.classList.add("comment");
-            cajares.classList.add("cajares1");
             newP.classList.add("comentario");
             newP.textContent = comentario.content;
-            cajares.appendChild(newi);
-            cajares.appendChild(newres);
+
+            comment.classList.add("comment");
+            cajares.classList.add("cajares1");
+
             comment.appendChild(newP);
-            comment.appendChild(cajares);
+
+            // Solo agrega la "L" y la respuesta si el comentario tiene respuesta
+            if (comentario.answer) {
+              const newi = document.createElement("img");
+              const newres = document.createElement("p");
+
+              newi.classList.add("Lrespuesta");
+              newi.src = "Lrespuesta.png";
+
+              newres.classList.add("respuesta-texto");
+              newres.textContent = comentario.answer;
+
+              cajares.appendChild(newi); // Añade la "L" en cajares
+              cajares.appendChild(newres); // Añade la respuesta a la derecha de la "L"
+
+              comment.appendChild(cajares); // Añade cajares al comentario
+            }
+
             if (!comentario.answer && userId == authorid && isLoggedIn) {
               const inputRespuesta = document.createElement("input");
               inputRespuesta.placeholder = "Escribe tu respuesta aquí";
@@ -194,9 +202,8 @@ fetch(`http://localhost:8000/api/comments/`)
                   return response.json();
                 });
               });
-            } else {
-              //Si hay respuesta
             }
+
             commentsContainer.appendChild(comment);
           }
         });
