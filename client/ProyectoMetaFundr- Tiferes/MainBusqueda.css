@@ -43,6 +43,7 @@ body {
 .columns {
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
 
@@ -52,15 +53,22 @@ body {
 
 
 .card {
-    background-color: #fffdd0; /* Color de fondo de las tarjetas */
+    background-color: #F9F4C7;
     border-radius: 15px;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     position: relative;
+    transition: 0.2s;
+    cursor: pointer;
 }
+.card:hover {
+    scale: 1.01;
+    background-color: #fffdd0; 
+}
+
 
 
 .card img {
@@ -124,12 +132,25 @@ body {
     position: relative;
     left: -44px;
     font-size: 150%;
+transition: 0.2s;
+
 }
+.Glass:hover{
+       
+        scale: 1.1;
+    
+}
+
 .SearchI{
     background-color: #fffdd0;
     height: 40%;
     margin-top: 6px;
+transition: 0.1s;
 }
+.SearchI:hover{
+    outline: 1px solid #F9F4C7;
+}
+
 .nav{
     display: flex;
 }
@@ -140,16 +161,20 @@ body {
 .circle {
     width: 40px; 
     height: 40px; 
-    background-color: #F9F4C7; /* Color de fondo del círculo */
+    background-color: #F9F4C7; 
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid #000; /* Borde negro */
+    border: 3px solid #000; 
     margin-left: 10px;
     margin-right: 10px;
     color: black;
     font-size: 25px;
+    transition: 0.2s;
+}
+.circle:hover {
+    scale: 1.1 ;
 }
 
 
@@ -166,6 +191,8 @@ a {
     padding: 10px;
     padding: 0px 150px; 
     margin-bottom: 20px;
+    display: none;
+
 }
 
 .menu-item {
