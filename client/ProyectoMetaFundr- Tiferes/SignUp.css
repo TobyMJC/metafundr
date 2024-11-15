@@ -196,11 +196,11 @@ input {
     transition: 0.2s;
 }
 .country-code:hover {
-    background-color: #e7c464;
+    background-color: #fde9a5;
 
 }
 input:hover {
- background-color: #e7c464;
+ background-color: #fde9a5;
 }
 button {
     transition: 0.2s;
@@ -210,6 +210,7 @@ button:hover{
     outline: 1px solid #3f2910;
     background-color: #9c6f3b !important ;
     color: black !important;
+    scale: 1.05;
 }
 
 
