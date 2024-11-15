@@ -40,9 +40,20 @@ a {
     border: 3px solid #000; /* Borde negro */
     margin-left: 10px;
     margin-right: 10px;
-    cursor: pointer;
     color: black;
     font-size: 25px;
+    transition: 0.2s;
+}
+.backC{
+    cursor: pointer;
+    
+}
+.backC:hover{
+ background-color: #e9c194;
+ scale: 1.1;
+}
+.userC:hover {
+border-color: rgb(172, 45, 45);
 }
 
 .header .title {
@@ -113,11 +124,31 @@ h4 {
     margin-left: 144px;
     width: 261px;
 }
+.user-input:hover{
+    outline: 0.1px solid black;
+}
 .button-right{
     width: 280px;
+    background-color: #DAA06D;
+    transition: 0.2s;
 }
 
-.container button, .container input {
+
+button{
+    background-color: #A07855 ;
+    border: solid black 1px;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: #C78C5B;
+    scale: 1.03;
+}
+
+ .container input {
     background-color: #A07855;
     border: solid black 1px;
     border-radius: 15px;
@@ -127,7 +158,7 @@ h4 {
     transition: 0.2s;
 }
 
-.container button:hover, .container input:hover {
+ .container input:hover {
     background-color: #8B6145;
 }
 
@@ -180,5 +211,11 @@ h4 {
 
 .container .center-button:hover {
     background-color: #C78C5B;
+}
+
+
+input {
+    cursor: default !important;
+    color: wheat;
 }
 
