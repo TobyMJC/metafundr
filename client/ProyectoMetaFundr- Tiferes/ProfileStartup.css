@@ -9,7 +9,8 @@ body {
     background: linear-gradient(180deg, #ebad67 ,#633b0e);
     justify-content: center;
     align-items: center;
-    height: fit-content;
+    height: 100vh;
+    overflow-x: hidden;
 
 }
 .profile-card {
