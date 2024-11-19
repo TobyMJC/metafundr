@@ -105,7 +105,10 @@ h2 {
 .projects a {
     text-decoration: none;
 }
+.buscador {
+    cursor: default;
 
+}
 .project {
     background-color: #654531;
     border-radius: 15px;
