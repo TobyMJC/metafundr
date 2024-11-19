@@ -29,6 +29,10 @@ body{
 } 
 .BACK{
     cursor: pointer;
+    transition: 0.2s;
+}
+.BACK:hover{
+    scale: 1.1;
 }
 .plus {
     font-size: 140%;

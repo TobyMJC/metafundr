@@ -2,6 +2,7 @@ document.getElementById('redirect-icon').addEventListener('click', function() {
     window.location.href = 'Publications.html';
 });
 
+
 console.log(localStorage.getItem("access_token"));
 // Evento del botón de usuario
 document.getElementById('redirect-user').addEventListener('click', function() {
@@ -14,31 +15,35 @@ document.getElementById('redirect-user').addEventListener('click', function() {
 });
 
 
+
+
 let publications = [];
+
 
 function displayProjects(filteredPublications) {
     const projectsContainer = document.querySelector('.projects');
-    projectsContainer.innerHTML = ''; 
+    projectsContainer.innerHTML = '';
     filteredPublications.forEach((publicacion) => {
         const newDiv = document.createElement('div');
         newDiv.classList.add('project');
-        
+       
         const newImg = document.createElement('img');
         newImg.src = publicacion.thumbnail;
         newImg.alt = publicacion.description;
         newDiv.appendChild(newImg);
-        
+       
         const newP = document.createElement('p');
         newP.textContent = publicacion.title;
         newDiv.appendChild(newP);
-        
+       
         newDiv.addEventListener('click', () => {
             window.location.href = `Project.html?id=${publicacion.id}`;
         });
-        
+       
         projectsContainer.appendChild(newDiv);
     });
 }
+
 
 function filterProjects() {
     const searchQuery = document.getElementById('buscador').value.toLowerCase();
@@ -48,16 +53,18 @@ function filterProjects() {
     displayProjects(filteredPublications);
 }
 
+
 fetch(`http://localhost:8000/api/posts/`)
     .then((response) => response.json())
     .then((datos2) => {
         publications = datos2;
-        displayProjects(publications); 
+        displayProjects(publications);
     })
     .catch((error) => {
         console.error('Error al obtener las publicaciones:', error);
     });
 
+
 document.getElementById('search-button').addEventListener('click', function() {
-    filterProjects(); 
+    filterProjects();
 });
