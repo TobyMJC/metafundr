@@ -177,12 +177,21 @@ transition: 0.1s;
     scale: 1.1 ;
 }
 
-
+.circle1{
+    font-size: 23px !important;
+    padding-bottom: 1.5px;
+}
 a {
     text-decoration: none;
 }
 .inactive {
     margin-right: 80px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.inactive:hover{
+    scale: 1.1;
+    border-bottom: 2px solid white;
 }
 
 .menu {
@@ -191,7 +200,7 @@ a {
     padding: 10px;
     padding: 0px 150px; 
     margin-bottom: 20px;
-    display: none;
+
 
 }
 

@@ -44,7 +44,15 @@ a {
      position: relative;
      left: 1220px;
      margin-top: 10px;
+    transition: 0.2s;
+
+
 }
+
+.flecha:hover{
+    scale:  1.1;
+}
+
 .profile-pic {
     border-radius: 50%;
     width: 80px;
@@ -55,8 +63,19 @@ a {
 .linker {
     text-decoration: none;
     z-index: 10;
+    transition: 0.3s ;
     color: black;
 }
+
+
+.linker:hover{ 
+border-bottom: 2px solid #633b0e;
+scale: 1.1;
+color: #633b0e;
+}
+
+
+
 
 h1 {
     font-size: 38px;
@@ -303,11 +322,13 @@ input:focus {
     margin-left: 10px;
     margin-right: 10px;
     color: black;
-    font-size: 25px;
+    font-size: 20px;
+    padding-left: 1px;
+    padding-bottom: 1px;
 }
 
 
-.menu {
+.menu { 
     display: flex;
     justify-content: space-between; 
     padding: 10px;

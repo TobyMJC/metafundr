@@ -30,8 +30,12 @@ body {
     font-size: 45px;
      position: relative;
      left: 1135px;
-     
+     transition: 0.2s;
 }
+.flecha:hover{
+    scale:  1.1;
+}
+
 .LogoN {
     width: 60%;
 }
@@ -259,7 +263,7 @@ input:focus {
     margin-left: 10px;
     margin-right: 10px;
     color: black;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 
@@ -285,9 +289,12 @@ input:focus {
 }
 .linker {
     text-decoration: none;
-    transition: 1s;
+    transition: 0.3s ;
     color: black;
 }
 .linker:hover{ 
-border-bottom: 1px solid black;
+border-bottom: 2px solid #633b0e;
+scale: 1.1;
+color: #633b0e;
 }
+
