@@ -20,6 +20,13 @@ class MetaUserSerializer(serializers.ModelSerializer):
             phone_number = validated_data['phone_number'],
             date_of_birth = validated_data['date_of_birth']
         )
+
+        image = validated_data.get('image', None)
+
+        if image:
+            user.image = image
+            user.save()
+
         return user
 
 class PostCommentSerializer(serializers.ModelSerializer):
