@@ -49,12 +49,10 @@ a {
     
 }
 .backC:hover{
- background-color: #e9c194;
+
  scale: 1.1;
 }
-.userC:hover {
-border-color: rgb(172, 45, 45);
-}
+
 
 .header .title {
     font-size: 16px;
