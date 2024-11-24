@@ -9,6 +9,7 @@ body{
     background: linear-gradient(180deg, #ebad67 ,#633b0e);
     font-family: 'Inter';
     height: 110vh;
+    overflow: hidden ;
 }
 
 .circle {
@@ -46,6 +47,7 @@ body {
     font-family: Arial, sans-serif;
     height: 100vh;
     margin: 0;  
+    
 }
 
 .form-container {
@@ -54,6 +56,8 @@ body {
     border-radius: 10px;
     width: 800px;
     text-align: center;
+    
+    
 }
 
  input { 
@@ -161,8 +165,11 @@ input {
 
 .Main{
     display: flex;
+    width: 100%;
+    height: 90%;
     justify-content: center;
-    margin-top: 2.5%;
+    align-items: center;
+    
 }
 
 .img-container{

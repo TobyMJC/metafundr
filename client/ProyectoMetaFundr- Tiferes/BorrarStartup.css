@@ -1,0 +1,89 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #d39c5d ,#836440);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    width: 450px;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 2px solid #333;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    
+    
+}
+
+.back-arrow {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 118px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.back-arrow:hover {
+    scale: 1.1;
+}
+h1 {
+    font-size: 18px;
+    margin: 0;
+}
+.subrayado {
+    background-color: gray;
+    height: 2px;
+    width: 180px;
+    position: relative;
+    left: -20px;
+    opacity: .5;
+    
+}
+.content {
+    margin-bottom: 20px;
+}
+
+.Startup {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.warning {
+    font-size: 14px;
+    color: #333;
+    width: 400px;
+}
+
+.delete-button {
+    background-color: #ffe9d4;
+    border: 1px solid #333;
+    color: #333;
+    font-size: 16px;
+    padding: 5px 40px;
+    border-radius: 20px;
+    position: relative;
+    left: 305px;
+    cursor: pointer;
+    margin: 0 auto;
+   
+    transition: 0.2s ease;
+}
+
+.delete-button:hover {
+    background-color: #ac674c;
+    scale: 1.1;
+    
+}
