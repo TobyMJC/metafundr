@@ -49,39 +49,21 @@ fetch(`http://localhost:8000/api/posts/${projectId}`)
     ).style.backgroundImage = `url(${publicacion.thumbnail})`;
 
     if (userId == authoridd) {
-      console.log("holaaaaaa");
       const deleteButton = document.createElement("button");
       deleteButton.id = "Delete-button";
-      deleteButton.onclick = deletePost;
+      deleteButton.onclick = redirectToDeletePage; // Redirige a la nueva página
       deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
 
       const profileDiv = document.getElementById("Perfil");
       profileDiv.appendChild(deleteButton);
-    } else {
-      console.log("chauuuu");
     }
   })
   .catch((error) => {
     console.error("Error al cargar los detalles de la publicación:", error);
   });
 
-function deletePost() {
-  fetch(`http://localhost:8000/api/posts/${projectId}/`, {
-    method: "DELETE",
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-    },
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Error ${response.status}: ${response.statusText}`);
-      }
-      redirectToMain();
-    })
-    .catch((error) => {
-      console.error("Error al eliminar la publicación:", error);
-      alert("No se pudo eliminar la publicación.");
-    });
+function redirectToDeletePage() {
+  window.location.href = `BorrarStartup.html?projectId=${projectId}`;
 }
 
 function PostComent() {

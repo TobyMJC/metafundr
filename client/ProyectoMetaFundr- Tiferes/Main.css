@@ -158,7 +158,13 @@ h2 {
     text-align: center;
     height: 160px;
     position: relative;
+    transition: 0.2s;
+    margin-bottom: 30px;
+    cursor: pointer;
    
+}
+.project:hover{
+    scale: 1.1;
 }
 .linker {
     padding-top: 3px;
@@ -179,7 +185,7 @@ h2 {
 .project img {
     width: 100%;
     border-radius: 15px;
-    height: 150px;
+    height: 170px;
     /* Fija la altura de todas las imágenes */
    
     object-fit: cover;
