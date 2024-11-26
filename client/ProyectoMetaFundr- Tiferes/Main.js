@@ -33,7 +33,6 @@ function displayProjects(filteredPublications) {
         newDiv.appendChild(newImg);
        
         const newP = document.createElement('p');
-        newP.textContent = publicacion.title;
         newDiv.appendChild(newP);
        
         newDiv.addEventListener('click', () => {

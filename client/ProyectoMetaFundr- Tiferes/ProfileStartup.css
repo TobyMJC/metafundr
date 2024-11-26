@@ -9,8 +9,10 @@ body {
     background: linear-gradient(180deg, #ebad67 ,#633b0e);
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
     overflow-x: hidden;
+
 
 }
 .profile-card {
@@ -201,8 +203,11 @@ h1 {
     cursor: pointer;
     color: black;
     font-size: 10px;
+    transition: 0.2s;
 }
-
+.circle:hover{
+    scale: 1.1;
+}
 
 
 
@@ -273,6 +278,10 @@ padding: 0px 10px ;
     left: -44px;
     font-size: 150%;
     margin-top:4px ;
+    transition: 0.2s;
+}
+.Glass:hover {
+    scale: 1.1;
 }
 
 .SearchI {
@@ -280,9 +289,10 @@ padding: 0px 10px ;
     height: 40%;
     margin-top: 6px;
     border: 1px solid #000 ;
-    
-    
-    
+    transition: 0.2s;
+}
+.SearchI:hover{
+    scale: 1.005;
 }
 
 h2 {
@@ -325,6 +335,10 @@ input:focus {
     font-size: 20px;
     padding-left: 1px;
     padding-bottom: 1px;
+    transition: 0.2s;
+}
+.circle1:hover {
+    scale: 1.1;
 }
 
 
@@ -348,3 +362,4 @@ input:focus {
     
     border-bottom: 2px solid white; /* Subrayado en el elemento activo */
 }
+
